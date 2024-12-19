@@ -1,0 +1,67 @@
+{% assign fixedImage = 'https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' %}
+
+{% assign thumbnails = 'https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg,https://images.pexels.com/photos/4110346/pexels-photo-4110346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,https://images.pexels.com/photos/27274784/pexels-photo-27274784/free-photo-of-parfum.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' %}
+{% assign views = 'https://unsplash.it/300,https://unsplash.it/500,https://unsplash.it/400,https://unsplash.it/200' %}
+
+{% assign thumbnails_array = thumbnails | split: ',' %}
+{% assign views_array = views | split: ',' %}
+
+<div>
+  <div>
+    <img id="largeImage" width="100px" height="100px" src="{{ views_array[0] }}" alt="Large Image">
+  </div>
+  <div>
+    {% for thumbnail in thumbnails_array %}
+      {% assign index = forloop.index0 %}
+      <div
+        onmouseleave="document.getElementById('largeImage').src='{{ views_array[0] }}'"
+        onmouseenter="document.getElementById('largeImage').src='{{ views_array[index] }}'"
+      >
+        <img src="{{ thumbnail }}" width="100px" height="100px" alt="Image {{ forloop.index }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="w-full h-[50vh] lg:h-[70vh] flex flex-col md:flex-row gap-4 border-4 max-w-screen-xl mx-auto border-black">
+  <div class="w-full md:w-[40%] h-[50%] md:h-full">
+    <img
+      id="largeImage"
+      src="{{ fixedImage }}"
+      alt="Large Image"
+      height="100px"
+      width="100px"
+      class="w-full h-full object-cover"
+    >
+  </div>
+  <div class="flex-1 flex flex-wrap max-sm:flex-nowrap h-[50%] md:h-full gap-2">
+    {% for image in images %}
+      <div
+        onmouseleave="resetImage()"
+        onmouseenter="changeImage('{{ image.view }}')"
+        class="w-[49%] md:flex-1 h-[49%] md:h-full border-4 border-green-500"
+      >
+        <img
+          src="{{ image.thumbnail }}"
+          alt="Image {{ forloop.index }}"
+          height="100px"
+          width="100px"
+          class="w-full h-full object-cover"
+        >
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  var fixedImage = "{{ fixedImage }}";
+  var largeImage = document.getElementById('largeImage');
+
+  function changeImage(view) {
+    largeImage.src = view;
+  }
+
+  function resetImage() {
+    largeImage.src = fixedImage;
+  }
+</script>

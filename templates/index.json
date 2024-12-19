@@ -1,0 +1,307 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero-bg-video": {
+      "type": "hero-bg-video",
+      "settings": {}
+    },
+    "custom_code_s2_KgDqMT": {
+      "type": "Custom-code-s2",
+      "settings": {
+        "heading": "FOR THOSE WHO STAND OUT",
+        "paragraph": "Each fragrance is carefully formulated with the highest quality ingredients, ushering in a new era of perfumes for those who appreciate the finest in life.",
+        "padding": "40px 20px 30px"
+      }
+    },
+    "discover_8mUyY9": {
+      "type": "discover",
+      "settings": {
+        "mens_closed_image": "shopify://shop_images/M_Open_Box.webp",
+        "mens_open_image": "shopify://shop_images/M_Closed_Box.webp",
+        "womens_closed_image": "shopify://shop_images/F_Open_Box.webp",
+        "womens_open_image": "shopify://shop_images/F_Closed_Box.webp",
+        "mens_collection_url": "",
+        "womens_collection_url": ""
+      }
+    },
+    "background_model_9ywmNj": {
+      "type": "background-model",
+      "settings": {
+        "flex_direction_row": true,
+        "default_background_image": "shopify://shop_images/S4_Static_Box_BG_1.png",
+        "bottle_action_image": "shopify://shop_images/Action_T.png",
+        "background_action_image": "shopify://shop_images/ACTION_BG.png",
+        "bottle_revolution_image": "shopify://shop_images/REVOLUTION_T.png",
+        "background_revolution_image": "shopify://shop_images/REVOLUTION_BG.png",
+        "bottle_lion_image": "shopify://shop_images/LION_T.png",
+        "background_lion_image": "shopify://shop_images/LION_BG.png",
+        "bottle_potion_image": "shopify://shop_images/POTION_T.png",
+        "background_potion_image": "shopify://shop_images/POTION_BG.png"
+      }
+    },
+    "female_background_model_49TLaB": {
+      "type": "female-background-model",
+      "settings": {
+        "female_direction_row": false,
+        "female_background_image": "shopify://shop_images/Onmly_Box_with_White_BG.png",
+        "bottle_attraction_image": "shopify://shop_images/ATT_T2_8bit_0.5x_0.5x.png",
+        "background_attraction_image": "shopify://shop_images/Attraction_BG_S4.png",
+        "bottle_emotion_image": "shopify://shop_images/EMO_T2_8bit_0.5x.png",
+        "background_emotion_image": "shopify://shop_images/Emotion_BG_S4.png",
+        "bottle_passion_image": "shopify://shop_images/PAS_T2_8bit_0.5x_0.5x.png",
+        "background_passion_image": "shopify://shop_images/Passion_BG_S4.png",
+        "bottle_seduction_image": "shopify://shop_images/SED_T2_8bit_0.5x.png",
+        "background_seduction_image": "shopify://shop_images/Sed_BG_S4_52314fc4-50ca-411b-9c1b-e8e7993ee11d.png"
+      }
+    },
+    "combined_photography_section_MatjmQ": {
+      "type": "Combined-Photography-Section",
+      "settings": {
+        "men_text": "Explore for Men",
+        "women_text": "Explore for Women",
+        "men_default_background": "shopify://shop_images/M_Closed_Box.webp",
+        "bottle_action_image": "shopify://shop_images/Action_T.png",
+        "background_action_image": "shopify://shop_images/ACTION_BG.png",
+        "bottle_revolution_image": "shopify://shop_images/REVOLUTION_T.png",
+        "background_revolution_image": "shopify://shop_images/REVOLUTION_BG.png",
+        "bottle_lion_image": "shopify://shop_images/LION_T.png",
+        "background_lion_image": "shopify://shop_images/LION_BG.png",
+        "bottle_potion_image": "shopify://shop_images/POTION_T.png",
+        "background_potion_image": "shopify://shop_images/POTION_BG.png",
+        "women_default_background": "shopify://shop_images/F_Closed_Box.webp",
+        "women_bottle_attraction_image": "shopify://shop_images/ATT_T2_8bit_0.5x_0.5x.png",
+        "women_background_attraction_image": "shopify://shop_images/Attraction_BG_S4.png",
+        "women_bottle_emotion_image": "shopify://shop_images/EMO_T2_8bit_0.5x.png",
+        "women_background_emotion_image": "shopify://shop_images/Emotion_BG_S4.png",
+        "women_bottle_passion_image": "shopify://shop_images/PAS_T2_8bit_0.5x_0.5x.png",
+        "women_background_passion_image": "shopify://shop_images/Passion_BG_S4.png",
+        "women_bottle_seduction_image": "shopify://shop_images/SED_T2_8bit_0.5x.png",
+        "women_background_seduction_image": "shopify://shop_images/Sed_BG_S4.png"
+      }
+    },
+    "custom_banner_section_RTGkEB": {
+      "type": "Custom-Banner-Section",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
+        "mobile_image": "shopify://shop_images/M_Closed_Box.png",
+        "button_text": "EXPLORE",
+        "button_link": "shopify://products/women-s-fragrance-set"
+      }
+    },
+    "1733908113d1a89df4": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_dAV4T4": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Connect with us on Instagram",
+            "title_color": "",
+            "alignment": "center",
+            "margin_sides": 0,
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_dAV4T4"
+      ],
+      "custom_css": [
+        "@media (min-width: 992px) {.container-fluid {padding-inline: 6.1rem; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "testimonials_d8iBjG": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_w3GdLY": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_dfkE38": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_jKG44x": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_rCjWiC": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_KVMxfb": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image_text": "",
+            "image_link": "",
+            "product": ""
+          }
+        },
+        "testimonial_qCYqzN": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Love it so much",
+            "description": "<p>\"Short dress in a printed viscose weave with a round neckline, opening with a button at the back of the Seams with small frill trims at the waist and on the sleeves and skirt. Unlined.\"</p>",
+            "footer": "<p>Dean D. US</p>",
+            "image": "shopify://shop_images/ATT_T2_8bit_0.5x_0.5x.png",
+            "image_text": "<p>i</p>",
+            "image_link": "",
+            "product": "eau-de-mirage-by-luxe-scent-co"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_w3GdLY",
+        "testimonial_dfkE38",
+        "testimonial_jKG44x",
+        "testimonial_rCjWiC",
+        "testimonial_KVMxfb",
+        "testimonial_qCYqzN"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "What People Are Saying",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "w-full",
+        "background_color": "",
+        "design": "testimonials-1",
+        "show_stars": true,
+        "autorotate": true,
+        "show_navigation": false,
+        "show_pagination": true,
+        "star_color": "#e5c789",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "testimonials_carousel_VLPcHc": {
+      "type": "Testimonials-Carousel",
+      "blocks": {
+        "testimonial_PWBthM": {
+          "type": "testimonial",
+          "settings": {
+            "influencer_image": "shopify://shop_images/POTION_T.png",
+            "influencer_name": "Perfume Blogger",
+            "influencer_type": "Scent Seeker",
+            "review_text": "lorem isprion fht fbv gbbbvvvvb tgggggggggggggggg"
+          }
+        },
+        "testimonial_YXrCac": {
+          "type": "testimonial",
+          "settings": {
+            "influencer_image": "shopify://shop_images/Action_T.png",
+            "influencer_name": "Scent Seeker",
+            "influencer_type": "Perfume Blogger",
+            "review_text": "This sounds divine! 💫 Adding to my must-try list."
+          }
+        },
+        "testimonial_bzCtjt": {
+          "type": "testimonial",
+          "settings": {
+            "influencer_image": "shopify://shop_images/LION_T.png",
+            "influencer_name": "Glam By Grace",
+            "influencer_type": "Beauty Influencer",
+            "review_text": "Beautifully written! Sounds like a scent I'd wear all day. 💖"
+          }
+        },
+        "testimonial_ckVHa9": {
+          "type": "testimonial",
+          "settings": {
+            "influencer_image": "shopify://shop_images/REVOLUTION_T.png",
+            "influencer_name": "Priyanka Nazareth",
+            "influencer_type": "Lifestyle Influencer",
+            "review_text": "lorem isprion fht fbv gbbbvvvvb tgggggggggggggggggggggggbgvvv vvvvbbbbbbb"
+          }
+        },
+        "testimonial_QtkdHc": {
+          "type": "testimonial",
+          "settings": {
+            "influencer_image": "shopify://shop_images/POTION_T.png",
+            "influencer_name": "Essence Explorer",
+            "influencer_type": "Luxury Lifestyle",
+            "review_text": "Love the layers you described! Can almost smell it from here! 🌸✨"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_PWBthM",
+        "testimonial_YXrCac",
+        "testimonial_bzCtjt",
+        "testimonial_ckVHa9",
+        "testimonial_QtkdHc"
+      ],
+      "disabled": true,
+      "settings": {
+        "slide_interval": 3,
+        "name_font_size": 18,
+        "type_font_size": 14,
+        "review_font_size": 16
+      }
+    }
+  },
+  "order": [
+    "hero-bg-video",
+    "custom_code_s2_KgDqMT",
+    "discover_8mUyY9",
+    "background_model_9ywmNj",
+    "female_background_model_49TLaB",
+    "combined_photography_section_MatjmQ",
+    "custom_banner_section_RTGkEB",
+    "1733908113d1a89df4",
+    "testimonials_d8iBjG",
+    "testimonials_carousel_VLPcHc"
+  ]
+}

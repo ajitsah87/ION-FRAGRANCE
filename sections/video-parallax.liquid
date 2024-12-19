@@ -1,0 +1,108 @@
+<section class="video-parallax-section {{ section.id }}">
+  <div class="parallax-container">
+    <div class="content"></div>
+    <video
+      class="video"
+      autoplay
+      muted
+      loop>
+      <source src="https://cdn.shopify.com/videos/c/o/v/35ec03758fa44d5ab6853be1b762e990.mp4" />
+    </video>
+  </div>
+</section>
+
+<style>
+  .video-parallax-section.{{ section.id }} {
+    .parallax-container {
+      height: 600px;
+      position: relative;
+      display: grid;
+      place-content: center;
+      isolation: isolate;
+      overflow: hidden;
+
+      .content {
+        color: white;
+      }
+
+
+      .video {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        min-width: 100%;
+        min-height: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @media (max-width: 578px) {
+    .video-parallax-section.{{ section.id }} {
+        .parallax-container {
+            height: 400px;
+        }
+    }
+  }
+</style>
+
+<script>
+     document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.video-parallax-section .video');
+        const parallaxSection = document.querySelector('.video-parallax-section');
+  
+        let isInView = false;
+        let offset = 0;
+        let lastScrollTop = window.scrollY;
+  
+        // Set up IntersectionObserver
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isInView = entry.isIntersecting;
+            });
+        }, { threshold: 1 });
+  
+        observer.observe(parallaxSection);
+  
+  
+          function updatePosition() {
+  
+  }
+  
+        // Apply transform only when section is in view
+        window.addEventListener('scroll', () => {
+            if (isInView) {
+                const currentScrollTop = window.scrollY;
+                const maxOffset = 50;
+    
+  
+                if (isInView) {
+                    if (currentScrollTop > lastScrollTop) {
+                        // Scrolling down
+                        offset = Math.max(-maxOffset, offset - 1); // Move towards -100
+                    } else if (currentScrollTop < lastScrollTop) {
+                        // Scrolling up
+                        offset = Math.min(maxOffset, offset + 1); // Move towards 100
+                    }
+                    video.style.transform = `translateY(${offset}px)`;
+                }
+            
+                lastScrollTop = currentScrollTop;
+            }
+        });
+    });
+</script>
+
+
+{% schema %}
+  {
+    "name": "Video Parallax",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Video Parallax"
+        }
+    ]
+  }
+{% endschema %}

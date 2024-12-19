@@ -1,0 +1,342 @@
+{% schema %}
+{
+  "name": "Testimonial Carousel",
+  "settings": [
+    {
+      "type": "range",
+      "id": "slide_interval",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "sec",
+      "label": "Slide Interval",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "name_font_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Influencer Name Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "type_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Influencer Type Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "review_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Review Text Font Size",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "influencer_image",
+          "label": "Influencer Image"
+        },
+        {
+          "type": "text",
+          "id": "influencer_name",
+          "label": "Influencer Name"
+        },
+        {
+          "type": "text",
+          "id": "influencer_type",
+          "label": "Influencer Type"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Carousel",
+      "category": "Testimonials"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="testimonial-carousel-container max-w-[1200px] mx-auto px-4">
+  <div
+    class="testimonial-carousel relative w-full overflow-hidden"
+    data-interval="{{ section.settings.slide_interval | times: 1000 }}"
+    style="
+      --name-size: {{ section.settings.name_font_size }}px;
+      --type-size: {{ section.settings.type_font_size }}px;
+      --review-size: {{ section.settings.review_font_size }}px;
+    "
+  >
+    <div class="carousel-track flex transition-transform duration-500">
+      {% assign total_slides = section.blocks.size %}
+
+      {% for block in section.blocks %}
+        <div class="carousel-slide flex-none w-full md:w-1/3 px-4" {{ block.shopify_attributes }}>
+          <div class="testimonial-card bg-white rounded-lg shadow-lg p-6 h-full flex flex-col items-center text-center">
+            {% if block.settings.influencer_image %}
+              <div class="image-wrapper mb-4 w-[250px] h-[250px] overflow-hidden rounded-lg">
+                {{
+                  block.settings.influencer_image
+                  | image_url: width: 300
+                  | image_tag:
+                    class: 'w-full h-full object-cover rounded-lg',
+                    loading: 'lazy',
+                    alt: block.settings.influencer_name
+                }}
+              </div>
+            {% endif %}
+            <h3 class="influencer-name font-semibold mb-2">{{ block.settings.influencer_name }}</h3>
+            <p class="influencer-type text-gray-600 mb-3">{{ block.settings.influencer_type }}</p>
+            <p class="review-text text-gray-800">{{ block.settings.review_text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+      <!-- Cloning slides for seamless looping -->
+      {% for block in section.blocks limit: 2 %}
+        <div class="carousel-slide flex-none w-full md:w-1/3 px-4">
+          <div class="testimonial-card bg-white rounded-lg shadow-lg p-6 h-full flex flex-col items-center text-center">
+            {% if block.settings.influencer_image %}
+              <div class="image-wrapper mb-4 w-[250px] h-[250px] overflow-hidden rounded-lg">
+                {{
+                  block.settings.influencer_image
+                  | image_url: width: 300
+                  | image_tag:
+                    class: 'w-full h-full object-cover rounded-lg',
+                    loading: 'lazy',
+                    alt: block.settings.influencer_name
+                }}
+              </div>
+            {% endif %}
+            <h3 class="influencer-name font-semibold mb-2">{{ block.settings.influencer_name }}</h3>
+            <p class="influencer-type text-gray-600 mb-3">{{ block.settings.influencer_type }}</p>
+            <p class="review-text text-gray-800">{{ block.settings.review_text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow-md hover:bg-white transition-colors">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/90 rounded-full p-3 shadow-md hover:bg-white transition-colors">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  .testimonial-carousel {
+    min-height: 450px;
+  }
+
+  .testimonial-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-track {
+    transform: translateX(0);
+    will-change: transform;
+  }
+
+  .influencer-name {
+    font-size: var(--name-size);
+    line-height: 1.2;
+  }
+
+  .influencer-type {
+    font-size: var(--type-size);
+    line-height: 1.4;
+  }
+
+  .review-text {
+    font-size: var(--review-size);
+    line-height: 1.5;
+  }
+
+  .carousel-prev, .carousel-next {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .carousel-prev:hover, .carousel-next:hover {
+    background: white;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-carousel {
+      min-height: 400px;
+    }
+
+    .image-wrapper {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.testimonial-carousel');
+  const track = carousel.querySelector('.carousel-track');
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  
+  const slideWidth = 100 / 3; // Width in percentage for desktop
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+  let isTransitioning = false;
+  const interval = parseInt(carousel.dataset.interval) || 3000;
+  
+  // Set initial position
+  updateCarousel();
+  
+  function updateCarousel(instant = false) {
+    if (instant) {
+      track.style.transition = 'none';
+    }
+    const offset = -currentIndex * slideWidth;
+    track.style.transform = `translateX(${offset}%)`;
+    
+    if (instant) {
+      track.offsetHeight; // Force reflow
+      track.style.transition = 'transform 500ms ease-out';
+    }
+  }
+  
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentIndex++;
+    updateCarousel();
+  }
+  
+  function prevSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentIndex--;
+    updateCarousel();
+  }
+  
+  function resetPosition() {
+    isTransitioning = false;
+    const originalSlideCount = totalSlides - 2; // Subtract cloned slides
+    
+    if (currentIndex >= originalSlideCount) {
+      currentIndex = 0;
+      updateCarousel(true);
+    } else if (currentIndex < 0) {
+      currentIndex = originalSlideCount - 1;
+      updateCarousel(true);
+    }
+  }
+  
+  // Auto-advance slides
+  let autoplay = setInterval(nextSlide, interval);
+  
+  // Event listeners
+  track.addEventListener('transitionend', resetPosition);
+  
+  carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+  carousel.addEventListener('mouseleave', () => {
+    clearInterval(autoplay);
+    autoplay = setInterval(nextSlide, interval);
+  });
+  
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    clearInterval(autoplay);
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    clearInterval(autoplay);
+  });
+  
+  // Touch events
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  carousel.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+    clearInterval(autoplay);
+  });
+  
+  carousel.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    
+    autoplay = setInterval(nextSlide, interval);
+  });
+  
+  // Handle window resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateCarousel(true);
+    }, 250);
+  });
+});
+</script>

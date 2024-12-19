@@ -1,0 +1,158 @@
+{% schema %}
+{
+  "name": "Dual Banner Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner Height Settings"
+    },
+    {
+      "type": "range",
+      "id": "banner_height",
+      "min": 300,
+      "max": 700,
+      "step": 50,
+      "unit": "px",
+      "label": "Banner Height",
+      "default": 500
+    },
+    {
+      "type": "header",
+      "content": "For Him Banner"
+    },
+    {
+      "type": "text",
+      "id": "him_heading",
+      "label": "Heading",
+      "default": "FOR HIM"
+    },
+    {
+      "type": "image_picker",
+      "id": "him_banner",
+      "label": "Banner Image"
+    },
+    {
+      "type": "header",
+      "content": "For Her Banner"
+    },
+    {
+      "type": "text",
+      "id": "her_heading",
+      "label": "Heading",
+      "default": "FOR HER"
+    },
+    {
+      "type": "image_picker",
+      "id": "her_banner",
+      "label": "Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dual Banner Section",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="dual-banner-section">
+  <!-- For Him Section -->
+  <div class="banner-section">
+    {% if section.settings.him_heading != blank %}
+      <h2 class="section-heading text-center">{{ section.settings.him_heading }}</h2>
+    {% endif %}
+
+    <div class="banner-container" style="height: {{ section.settings.banner_height }}px;">
+      {% if section.settings.him_banner %}
+        <div class="banner-image-container">
+          {{
+            section.settings.him_banner
+            | image_url: width: 2000
+            | image_tag:
+              loading: 'lazy',
+              class: 'banner-image w-full h-full object-cover',
+              alt: section.settings.him_heading
+          }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- For Her Section -->
+  <div class="banner-section">
+    {% if section.settings.her_heading != blank %}
+      <h2 class="section-heading text-center">{{ section.settings.her_heading }}</h2>
+    {% endif %}
+
+    <div class="banner-container" style="height: {{ section.settings.banner_height }}px;">
+      {% if section.settings.her_banner %}
+        <div class="banner-image-container">
+          {{
+            section.settings.her_banner
+            | image_url: width: 2000
+            | image_tag:
+              loading: 'lazy',
+              class: 'banner-image w-full h-full object-cover',
+              alt: section.settings.her_heading
+          }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .dual-banner-section {
+    width: 85%;
+    max-width: 100%;
+    margin:auto;
+  }
+
+  .banner-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    text-transform: uppercase;
+
+  }
+
+  .banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .banner-container:hover .banner-image {
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 768px) {
+    .section-heading {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner-section {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

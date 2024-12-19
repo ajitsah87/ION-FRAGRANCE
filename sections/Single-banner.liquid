@@ -1,0 +1,167 @@
+{% schema %}
+{
+  "name": "Single Banner Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "range",
+      "id": "banner_width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Banner Width",
+      "default": 85
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "EXPLORE"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "transparent",
+          "label": "Transparent"
+        }
+      ],
+      "default": "white"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Banner Section",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="banner-section">
+  <div class="banner-container" style="width: {{ section.settings.banner_width }}%">
+    {% if section.settings.banner_image %}
+      <div class="banner-image-container">
+        {{
+          section.settings.banner_image
+          | image_url: width: 2000
+          | image_tag: loading: 'lazy', class: 'banner-image', alt: section.settings.button_text
+        }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+      <div class="button-container">
+        <a href="{{ section.settings.button_link }}" class="explore-button button-{{ section.settings.button_style }}">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .banner-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+
+  .banner-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .banner-image-container {
+    width: 100%;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .button-container {
+
+  }
+
+  .explore-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .button-white {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .button-black {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  .button-transparent {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  .explore-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner-container {
+      width: 95% !important;
+    }
+
+    .explore-button {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
+</style>

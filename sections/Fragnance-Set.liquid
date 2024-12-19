@@ -1,0 +1,264 @@
+{%- style -%}
+  .fragrance-collection {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .fragrance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  .fragrance-item {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Forces 1:1 aspect ratio */
+    margin-bottom: 15px;
+  }
+
+  .fragrance-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .fragrance-title {
+    font-size: {{ section.settings.title_size }}px;
+    font-weight: {{ section.settings.title_weight }};
+    margin-bottom: 8px;
+    color: {{ section.settings.title_color }};
+  }
+
+  .fragrance-subtitle {
+    font-size: {{ section.settings.subtitle_size }}px;
+    color: {{ section.settings.subtitle_color }};
+    margin-bottom: 12px;
+  }
+
+  .price-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-current {
+    font-size: {{ section.settings.price_size }}px;
+    font-weight: bold;
+    color: {{ section.settings.price_color }};
+  }
+
+  .price-compare {
+    font-size: {{ section.settings.compare_price_size }}px;
+    text-decoration: line-through;
+    color: {{ section.settings.compare_price_color }};
+  }
+
+  /* Maintain layout on smaller screens */
+  @media screen and (max-width: 768px) {
+    .fragrance-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .fragrance-item {
+      max-width: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="fragrance-collection">
+  <div class="fragrance-grid">
+    {% for block in section.blocks %}
+      <div class="fragrance-item" {{ block.shopify_attributes }}>
+        <div class="image-wrapper">
+          {%- if block.settings.image != blank -%}
+            {{
+              block.settings.image
+              | image_url: width: 500
+              | image_tag: class: 'fragrance-image', loading: 'lazy', alt: block.settings.title
+              | escape
+            }}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'fragrance-image placeholder' }}
+          {%- endif -%}
+        </div>
+
+        <h2 class="fragrance-title">{{ block.settings.title }}</h2>
+        <p class="fragrance-subtitle">{{ block.settings.subtitle }}</p>
+
+        <div class="price-wrapper">
+          <span class="price-current">{{ block.settings.price | money_with_currency }}</span>
+          {% if block.settings.compare_price > block.settings.price %}
+            <span class="price-compare">{{ block.settings.compare_price | money_with_currency }}</span>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fragrance Collection",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Typography Settings"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title Font Size",
+      "min": 16,
+      "max": 36,
+      "step": 1,
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title Font Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "label": "Price Font Size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "compare_price_size",
+      "label": "Compare Price Font Size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "compare_price_color",
+      "label": "Compare Price Color",
+      "default": "#999999"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "fragrance_item",
+      "name": "Fragrance Item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image",
+          "info": "Square image recommended (1:1 aspect ratio)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fragrance Set"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "4x 30ml Exclusive Perfumes"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Price",
+          "default": 1345
+        },
+        {
+          "type": "number",
+          "id": "compare_price",
+          "label": "Compare Price",
+          "default": 1799
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fragrance sets",
+      "blocks": [
+        {
+          "type": "fragrance_item"
+        },
+        {
+          "type": "fragrance_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,459 @@
+<div class="combined-photography-section">
+  <div class="gender-toggle">
+    <button class="toggle-btn active" data-gender="men">{{ section.settings.men_text }}</button>
+    <button class="toggle-btn" data-gender="women">{{ section.settings.women_text }}</button>
+  </div>
+
+  <!-- Men's Section -->
+  <div class="photography-display active" data-gender="men">
+    <div class="display-container">
+      <div class="content-wrapper">
+        <div class="bottles-container">
+          {% assign men_bottles = 'Action, Revolution, Lion, Potion' | split: ', ' %}
+          {% for bottle in men_bottles %}
+            {% assign bottle_image = 'bottle_' | append: bottle | downcase | append: '_image' %}
+            <div class="bottle-wrapper" data-bottle="{{ bottle | downcase }}">
+              <img
+                src="{{ section.settings[bottle_image] | image_url }}"
+                alt="{{ bottle }}"
+                class="bottle-image"
+              >
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="background-container">
+          <img
+            src="{{ section.settings.men_default_background | image_url }}"
+            alt="Men Default Background"
+            class="background-image"
+            id="men-default-background"
+          >
+          {% for bottle in men_bottles %}
+            {% assign background_image = 'background_' | append: bottle | downcase | append: '_image' %}
+            <img
+              src="{{ section.settings[background_image] | image_url }}"
+              alt="{{ bottle }} Background"
+              class="background-image model-background"
+              data-bottle="{{ bottle | downcase }}"
+            >
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Women's Section -->
+  <div class="photography-display" data-gender="women">
+    <div class="display-container">
+      <div class="content-wrapper">
+        <div class="bottles-container">
+          {% assign women_bottles = 'Attraction, Emotion, Passion, Seduction' | split: ', ' %}
+          {% for bottle in women_bottles %}
+            {% assign bottle_image = 'women_bottle_' | append: bottle | downcase | append: '_image' %}
+            <div class="bottle-wrapper" data-bottle="{{ bottle | downcase }}">
+              <img
+                src="{{ section.settings[bottle_image] | image_url }}"
+                alt="{{ bottle }}"
+                class="bottle-image"
+              >
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="background-container">
+          <img
+            src="{{ section.settings.women_default_background | image_url }}"
+            alt="Women Default Background"
+            class="background-image"
+            id="women-default-background"
+          >
+          {% for bottle in women_bottles %}
+            {% assign background_image = 'women_background_' | append: bottle | downcase | append: '_image' %}
+            <img
+              src="{{ section.settings[background_image] | image_url }}"
+              alt="{{ bottle }} Background"
+              class="background-image model-background"
+              data-bottle="{{ bottle | downcase }}"
+            >
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .combined-photography-section {
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #ffffff;
+
+  }
+
+  .gender-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .toggle-btn.active {
+    font-weight: bold;
+  }
+
+  .toggle-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .photography-display {
+    display: none;
+  }
+
+  .photography-display.active {
+    display: block;
+  }
+
+  .display-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .bottles-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    z-index: 2;
+  }
+
+  .bottle-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .bottle-wrapper:hover {
+    transform: scale(1.25);
+  }
+
+  .bottle-image {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #men-default-background,
+  #women-default-background {
+    opacity: 1;
+  }
+  @media (min-width:992px){
+    .combined-photography-section{
+      display: none;
+    }
+  }
+  @media (max-width:992px){
+    .combined-photography-section{
+      display: block;
+      padding-bottom:3rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .display-container {
+      height: 500px;
+    }
+
+    .bottle-image {
+      height: 250px;
+    }
+
+    .bottles-container {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .display-container {
+      height: 400px;
+    }
+
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    .bottles-container {
+      width: 100%;
+      gap: 1rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .bottle-image {
+      height: 150px;
+    }
+
+    .bottle-wrapper:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .display-container {
+      height: 350px;
+    }
+
+    .bottle-image {
+      height: 120px;
+    }
+
+    .bottles-container {
+      gap: 0.75rem;
+    }
+
+    .gender-toggle {
+      gap: 1rem;
+    }
+
+    .toggle-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const displays = document.querySelectorAll('.photography-display');
+    const bottleWrappers = document.querySelectorAll('.bottle-wrapper');
+
+    // Toggle between men's and women's sections
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const gender = btn.dataset.gender;
+        
+        // Update toggle buttons
+        toggleBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Show/hide sections
+        displays.forEach(display => {
+          if (display.dataset.gender === gender) {
+            display.classList.add('active');
+          } else {
+            display.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Handle bottle hover effects
+    bottleWrappers.forEach(wrapper => {
+      wrapper.addEventListener('mouseenter', () => {
+        const section = wrapper.closest('.photography-display');
+        const bottleType = wrapper.dataset.bottle;
+        const defaultBackground = section.querySelector('#men-default-background, #women-default-background');
+        const targetBackground = section.querySelector(`.model-background[data-bottle="${bottleType}"]`);
+        
+        defaultBackground.style.opacity = '0';
+        section.querySelectorAll('.model-background').forEach(bg => {
+          bg.style.opacity = '0';
+        });
+        
+        if (targetBackground) {
+          targetBackground.style.opacity = '1';
+        }
+      });
+
+      wrapper.addEventListener('mouseleave', () => {
+        const section = wrapper.closest('.photography-display');
+        const defaultBackground = section.querySelector('#men-default-background, #women-default-background');
+        
+        section.querySelectorAll('.model-background').forEach(bg => {
+          bg.style.opacity = '0';
+        });
+        defaultBackground.style.opacity = '1';
+      });
+
+      wrapper.addEventListener('click', () => {
+        const bottleType = wrapper.dataset.bottle;
+        window.location.href = `/products/${bottleType}`;
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Combined Photography",
+  "settings": [
+    {
+      "type": "text",
+      "id": "men_text",
+      "label": "Men Toggle Text",
+      "default": "Explore for Men"
+    },
+    {
+      "type": "text",
+      "id": "women_text",
+      "label": "Women Toggle Text",
+      "default": "Explore for Women"
+    },
+    {
+      "type": "header",
+      "content": "Men's Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "men_default_background",
+      "label": "Men Default Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottle_action_image",
+      "label": "Action Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_action_image",
+      "label": "Action Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottle_revolution_image",
+      "label": "Revolution Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_revolution_image",
+      "label": "Revolution Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottle_lion_image",
+      "label": "Lion Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_lion_image",
+      "label": "Lion Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottle_potion_image",
+      "label": "Potion Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_potion_image",
+      "label": "Potion Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Women's Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_default_background",
+      "label": "Women Default Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_bottle_attraction_image",
+      "label": "Attraction Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_background_attraction_image",
+      "label": "Attraction Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_bottle_emotion_image",
+      "label": "Emotion Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_background_emotion_image",
+      "label": "Emotion Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_bottle_passion_image",
+      "label": "Passion Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_background_passion_image",
+      "label": "Passion Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_bottle_seduction_image",
+      "label": "Seduction Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "women_background_seduction_image",
+      "label": "Seduction Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Combined Photography",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

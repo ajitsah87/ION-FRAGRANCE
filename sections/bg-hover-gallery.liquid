@@ -1,0 +1,49 @@
+<div class="hover-bg-gallery {{ section.id }}">
+
+</div>
+
+
+{% schema %}
+{
+    "name": "Hover Background Gallery",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "This is a placeholder for heading"
+        },
+        {
+            "type": "text",
+            "id": "sub_text",
+            "label": "Sub Text",
+            "default": "This is a placeholder for sub text and here is more filler text"
+        },
+        {
+            "type": "image_picker",
+            "id": "card_image_1",
+            "label": "First Card Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "card_image_2",
+            "label": "Second Card Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "card_image_3",
+            "label": "Third Card Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "card_image_4",
+            "label": "Forth Card Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hover Background Gallery"
+        }
+    ]
+}
+{% endschema %}

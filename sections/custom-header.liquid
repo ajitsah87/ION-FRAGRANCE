@@ -1,0 +1,27 @@
+<section class="custom-header-section" id="{{ section.id }}">
+  <div class="left-section">
+    {% render 'header-search' %}
+  </div>
+  <div class="middle-section">
+    <a href="/">Home</a>
+    <a href="/collections">Fragrances</a>
+    <a href="/" class="header-logo">
+      <img src="{{ 'logo.svg' |  asset_url }}" alt="" height="64" width="65">
+    </a>
+    <a href="/pages/about-us">About Us</a>
+    <a href="/pages/contact">Contact Us</a>
+  </div>
+  <div class="right-section">
+    {% render 'header-account' %}
+    {% render 'header-cart' %}
+  </div>
+</section>
+
+{% schema %}
+{
+    "name": "Custom Header",
+    "settings": [
+
+        ]
+}
+{% endschema %}

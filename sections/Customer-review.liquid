@@ -1,0 +1,194 @@
+<div class="customer-reviews max-w-[1200px] mx-auto px-4 py-8">
+  <h2 class="text-2xl font-bold text-center mb-8">Customer Reviews</h2>
+
+  <!-- Carousel Container -->
+  <div class="relative overflow-hidden">
+    <div class="review-carousel-container flex transition-transform duration-500 ease-in-out" id="carousel-track">
+      {% assign reviews = section.blocks %}
+      {% for block in reviews %}
+        <div class="review-card w-full sm:w-1/2 lg:w-1/3 p-4 flex-none">
+          <div class="review-content bg-white rounded-lg shadow-lg p-6 text-center">
+            <a href="{{ block.settings.link_to_product }}" class="review-photo">
+              {% if block.settings.customer_photo %}
+                <img
+                  src="{{ block.settings.customer_photo | image_url: width: 100 }}"
+                  alt="{{ block.settings.customer_name }}"
+                  class="rounded-full w-20 h-20 mx-auto mb-4"
+                >
+              {% endif %}
+            </a>
+            <a href="{{ block.settings.link_to_product }}" class="review-name">
+              <h3 class="customer-name font-semibold text-lg">{{ block.settings.customer_name }}</h3>
+            </a>
+            <p class="customer-review mt-2 mb-4 text-gray-700">{{ block.settings.review_text }}</p>
+            <div class="review-rating text-yellow-500">
+              {% for i in (1..5) %}
+                {% if i <= block.settings.customer_rating %}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.521L24 9.748l-6 5.856 1.418 8.29L12 18.896l-7.418 4.998L6 15.604l-6-5.856 8.332-1.64L12 .587z"/>
+                  </svg>
+                {% else %}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 text-gray-300" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.521L24 9.748l-6 5.856 1.418 8.29L12 18.896l-7.418 4.998L6 15.604l-6-5.856 8.332-1.64L12 .587z"/>
+                  </svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      <!-- Clone the first review at the end for seamless looping -->
+      {% for block in reviews limit: 1 %}
+        <div class="review-card w-full sm:w-1/2 lg:w-1/3 p-4 flex-none">
+          <div class="review-content bg-white rounded-lg shadow-lg p-6 text-center">
+            <a href="{{ block.settings.link_to_product }}" class="review-photo">
+              {% if block.settings.customer_photo %}
+                <img
+                  src="{{ block.settings.customer_photo | image_url: width: 100 }}"
+                  alt="{{ block.settings.customer_name }}"
+                  class="rounded-full w-20 h-20 mx-auto mb-4"
+                >
+              {% endif %}
+            </a>
+            <a href="{{ block.settings.link_to_product }}" class="review-name">
+              <h3 class="customer-name font-semibold text-lg">{{ block.settings.customer_name }}</h3>
+            </a>
+            <p class="customer-review mt-2 mb-4 text-gray-700">{{ block.settings.review_text }}</p>
+            <div class="review-rating text-yellow-500">
+              {% for i in (1..5) %}
+                {% if i <= block.settings.customer_rating %}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.521L24 9.748l-6 5.856 1.418 8.29L12 18.896l-7.418 4.998L6 15.604l-6-5.856 8.332-1.64L12 .587z"/>
+                  </svg>
+                {% else %}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 text-gray-300" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.521L24 9.748l-6 5.856 1.418 8.29L12 18.896l-7.418 4.998L6 15.604l-6-5.856 8.332-1.64L12 .587z"/>
+                  </svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full">
+      ‹
+    </button>
+    <button class="carousel-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full">
+      ›
+    </button>
+  </div>
+</div>
+
+<style>
+  .customer-reviews { background-color: #f9f9f9; padding: 2rem 0; }
+  .review-card { transition: transform 0.3s ease-in-out; }
+  .carousel-prev, .carousel-next { cursor: pointer; top: 50%; transform: translateY(-50%); }
+  .carousel-prev { left: 10px; }
+  .carousel-next { right: 10px; }
+  /* Prevent overflow and ensure continuous scrolling */
+  .review-card {
+    min-width: 300px;
+    flex: 0 0 auto;
+  }
+</style>
+
+<script>
+  // JavaScript for infinite loop carousel
+  const track = document.querySelector('#carousel-track');
+  const prevButton = document.querySelector('.carousel-prev');
+  const nextButton = document.querySelector('.carousel-next');
+  let currentIndex = 0;
+  const items = Array.from(track.children);
+  const totalItems = items.length;
+
+  function moveToNext() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+  }
+
+  function moveToPrev() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const cardWidth = items[0].offsetWidth;
+    const offset = -currentIndex * cardWidth;
+    track.style.transition = 'transform 0.5s ease';
+    track.style.transform = `translateX(${offset}px)`;
+
+    // Reset to the first item when the last one is reached
+    if (currentIndex === totalItems - 1) {
+      setTimeout(() => {
+        track.style.transition = 'none'; // Disable transition temporarily
+        track.style.transform = 'translateX(0)'; // Reset to first review
+        currentIndex = 0;
+      }, 500); // Same duration as transition time
+    }
+  }
+
+  prevButton.addEventListener('click', moveToPrev);
+  nextButton.addEventListener('click', moveToNext);
+
+  // Auto slide every 3 seconds
+  setInterval(moveToNext, 3000);  // 3000ms = 3 seconds
+
+  // Initialize carousel position
+  updateCarousel();
+</script>
+
+{% schema %}
+{
+  "name": "Customer Reviews Carousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "Amazing product! Highly recommend to everyone."
+        },
+        {
+          "type": "range",
+          "id": "customer_rating",
+          "label": "Rating (1-5)",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "image_picker",
+          "id": "customer_photo",
+          "label": "Customer Photo"
+        },
+        {
+          "type": "url",
+          "id": "link_to_product",
+          "label": "Link to Product Page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

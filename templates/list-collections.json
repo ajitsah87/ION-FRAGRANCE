@@ -1,0 +1,152 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_content_yD887d": {
+      "type": "custom-content",
+      "blocks": {
+        "product_3kPUGn": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "width": "33%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "product_AarJFd": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "width": "33%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "product_Text8p": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "width": "33%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_3kPUGn",
+        "product_AarJFd",
+        "product_Text8p"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Custom content",
+        "subheading": "",
+        "description": "",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "background_color": "",
+        "gap": 30,
+        "use_scroll_mobile": false,
+        "gap_mobile": 16,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": ""
+      }
+    },
+    "main": {
+      "type": "collection-list-template",
+      "blocks": {
+        "collection_item_9gXMPt": {
+          "type": "collection_item",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "06786fde-900d-4048-b2a7-2f1af4b4963e": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "sweaters"
+          }
+        },
+        "c3c7dd10-c393-458e-a903-3de238b2e424": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "leather-boots"
+          }
+        },
+        "b43bcd47-6305-4507-86b2-397dcbb3cdfc": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "denim-pants"
+          }
+        },
+        "17b453d1-b173-4aed-8571-7dc75d2ec6ca": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "sunglasses"
+          }
+        },
+        "3aedbb94-935a-4d80-865f-7c7fbbbddb39": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "leather-bag"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_9gXMPt",
+        "06786fde-900d-4048-b2a7-2f1af4b4963e",
+        "c3c7dd10-c393-458e-a903-3de238b2e424",
+        "b43bcd47-6305-4507-86b2-397dcbb3cdfc",
+        "17b453d1-b173-4aed-8571-7dc75d2ec6ca",
+        "3aedbb94-935a-4d80-865f-7c7fbbbddb39"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container-fluid",
+        "display_type": "all",
+        "title": "All collection",
+        "description": "<p>Posuere in netus a eu varius adipiscing suspendisse elementum vitae tempor suspendisse <br/>ullamcorper aenean taciti morbi potenti.</p>"
+      }
+    },
+    "fragrance_box_hPzgF9": {
+      "type": "Fragrance-box",
+      "settings": {
+        "mens_closed_image": "shopify://shop_images/M_Open_Box_1.png",
+        "mens_open_image": "shopify://shop_images/M_Close.png",
+        "womens_closed_image": "shopify://shop_images/F_Open_Box_6f43ce66-776b-4a71-86a7-e264bca97823.png",
+        "womens_open_image": "shopify://shop_images/F_Closed_Box_e4b75a7d-695e-43b9-9f2b-1a1e0f9d11c5.png",
+        "mens_collection_url": "shopify://products/men-s-fragrance-set",
+        "womens_collection_url": "shopify://products/women-s-fragrance-set",
+        "mens_regular_price": "1,799",
+        "mens_sale_price": "1,345",
+        "womens_regular_price": "1,799",
+        "womens_sale_price": "1,345"
+      }
+    },
+    "dual_banner_qdGGMa": {
+      "type": "Dual-banner",
+      "settings": {
+        "banner_height": 300,
+        "him_heading": "FOR HIM",
+        "him_banner": "shopify://shop_images/Screenshot_2024-12-10_at_8.29.21_PM_1.png",
+        "her_heading": "FOR HER",
+        "her_banner": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1.png"
+      }
+    }
+  },
+  "order": [
+    "custom_content_yD887d",
+    "main",
+    "fragrance_box_hPzgF9",
+    "dual_banner_qdGGMa"
+  ]
+}

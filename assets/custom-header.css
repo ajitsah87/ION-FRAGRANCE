@@ -1,0 +1,42 @@
+.custom-header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: white;
+  padding-inline: 2rem;
+
+
+    .left-section {}
+
+    .middle-section {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        
+        a {
+            text-transform: uppercase;
+            font-weight: 500;
+            gap:4rem;
+
+            &.header-logo {
+                margin-inline: 5rem;
+            }
+        }
+    }
+    .right-section {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .custom-header-section {
+        display: none;
+    }
+}

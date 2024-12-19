@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "custom_css": [],
+      "settings": {
+        "container": "w-full"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "text-block-2": {
+          "type": "textblock",
+          "settings": {
+            "title": "Information",
+            "content": "<p>+91 7045454109</p><p>customersupport@ionfragrances.com</p>"
+          }
+        },
+        "text-block-3": {
+          "type": "socialmedia",
+          "settings": {
+            "title": "Social Media"
+          }
+        }
+      },
+      "block_order": [
+        "text-block-2",
+        "text-block-3"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "title": "We would love to hear from you.",
+        "description": "<p>If you’ve got great products your making or looking to work with us then drop us a line.</p>",
+        "show_name": true,
+        "show_phone": false,
+        "show_signup_email": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "contact-form"
+  ]
+}
