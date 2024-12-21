@@ -9,112 +9,22 @@
  */
 {
   "sections": {
-    "custom_content_yD887d": {
-      "type": "custom-content",
-      "blocks": {
-        "product_3kPUGn": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": "33%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "product_AarJFd": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": "33%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        },
-        "product_Text8p": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "width": "33%",
-            "alignment": "center",
-            "block_custom_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_3kPUGn",
-        "product_AarJFd",
-        "product_Text8p"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "Custom content",
-        "subheading": "",
-        "description": "",
-        "header_alignment": "center",
-        "container": "container-fluid",
-        "background_color": "",
-        "gap": 30,
-        "use_scroll_mobile": false,
-        "gap_mobile": 16,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_class": ""
-      }
-    },
     "main": {
       "type": "collection-list-template",
-      "blocks": {
-        "collection_item_9gXMPt": {
-          "type": "collection_item",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "06786fde-900d-4048-b2a7-2f1af4b4963e": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "sweaters"
-          }
-        },
-        "c3c7dd10-c393-458e-a903-3de238b2e424": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "leather-boots"
-          }
-        },
-        "b43bcd47-6305-4507-86b2-397dcbb3cdfc": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "denim-pants"
-          }
-        },
-        "17b453d1-b173-4aed-8571-7dc75d2ec6ca": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "sunglasses"
-          }
-        },
-        "3aedbb94-935a-4d80-865f-7c7fbbbddb39": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "leather-bag"
-          }
-        }
-      },
-      "block_order": [
-        "collection_item_9gXMPt",
-        "06786fde-900d-4048-b2a7-2f1af4b4963e",
-        "c3c7dd10-c393-458e-a903-3de238b2e424",
-        "b43bcd47-6305-4507-86b2-397dcbb3cdfc",
-        "17b453d1-b173-4aed-8571-7dc75d2ec6ca",
-        "3aedbb94-935a-4d80-865f-7c7fbbbddb39"
-      ],
       "disabled": true,
       "settings": {
         "container": "container-fluid",
         "display_type": "all",
         "title": "All collection",
         "description": "<p>Posuere in netus a eu varius adipiscing suspendisse elementum vitae tempor suspendisse <br/>ullamcorper aenean taciti morbi potenti.</p>"
+      }
+    },
+    "custom_banner_section_waUtJr": {
+      "type": "Custom-Banner-Section",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
+        "button_text": "EXPLORE",
+        "button_link": ""
       }
     },
     "fragrance_box_hPzgF9": {
@@ -144,8 +54,8 @@
     }
   },
   "order": [
-    "custom_content_yD887d",
     "main",
+    "custom_banner_section_waUtJr",
     "fragrance_box_hPzgF9",
     "dual_banner_qdGGMa"
   ]

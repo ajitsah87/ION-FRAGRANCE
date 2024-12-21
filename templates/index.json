@@ -36,7 +36,7 @@
       "type": "background-model",
       "settings": {
         "flex_direction_row": true,
-        "default_background_image": "shopify://shop_images/S4_Static_Box_BG_1.png",
+        "default_background_image": "shopify://shop_images/S4_Static_Box_BG_2.png",
         "bottle_action_image": "shopify://shop_images/Action_T.png",
         "background_action_image": "shopify://shop_images/ACTION_BG.png",
         "bottle_revolution_image": "shopify://shop_images/REVOLUTION_T.png",
@@ -62,6 +62,16 @@
         "background_seduction_image": "shopify://shop_images/Sed_BG_S4_52314fc4-50ca-411b-9c1b-e8e7993ee11d.png"
       }
     },
+    "dual_banner_Cfc39P": {
+      "type": "Dual-banner",
+      "settings": {
+        "banner_height": 500,
+        "him_heading": "FOR HIM",
+        "him_banner": "shopify://shop_images/Screenshot_2024-12-10_at_8.29.21_PM_1.png",
+        "her_heading": "FOR HER",
+        "her_banner": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png"
+      }
+    },
     "combined_photography_section_MatjmQ": {
       "type": "Combined-Photography-Section",
       "settings": {
@@ -85,15 +95,6 @@
         "women_background_passion_image": "shopify://shop_images/Passion_BG_S4.png",
         "women_bottle_seduction_image": "shopify://shop_images/SED_T2_8bit_0.5x.png",
         "women_background_seduction_image": "shopify://shop_images/Sed_BG_S4.png"
-      }
-    },
-    "custom_banner_section_RTGkEB": {
-      "type": "Custom-Banner-Section",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
-        "mobile_image": "shopify://shop_images/M_Closed_Box.png",
-        "button_text": "EXPLORE",
-        "button_link": "shopify://products/women-s-fragrance-set"
       }
     },
     "1733908113d1a89df4": {
@@ -298,8 +299,8 @@
     "discover_8mUyY9",
     "background_model_9ywmNj",
     "female_background_model_49TLaB",
+    "dual_banner_Cfc39P",
     "combined_photography_section_MatjmQ",
-    "custom_banner_section_RTGkEB",
     "1733908113d1a89df4",
     "testimonials_d8iBjG",
     "testimonials_carousel_VLPcHc"
