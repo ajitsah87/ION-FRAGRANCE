@@ -51,7 +51,7 @@
           "settings": {
             "show_quantity_selector": true,
             "show_atc_button": true,
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "variant_picker": {
@@ -67,6 +67,12 @@
             "show_ask_a_question": true,
             "show_social": true
           }
+        },
+        "custom_liquid_qpXfaH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "OFFER DESIGN\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Discount Codes</title>\n    <style>\n        .coupon2-main-container {\n            background-color: #ffe6e6;\n            padding: 8px 20px;\n            border-radius: 8px;\n            box-shadow: 0 0 10px rgba(0,0,0,0.1);\n            width: 100%;\n            margin: auto;\n        }\n        .coupon2 {\n            background-color: #ffefef;\n            padding: 2px 5px;\n    margin: 8px 0px;\n            border-radius: 8px;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            border: 1px solid #ffd6d6;\n        }\n        .coupon2-icon img{\n             width: 20px;\n        }\n        .coupon2-text {\n            flex-grow: 1;\n            margin-left: 10px;\n            font-size: 12px;\n        }\n        .coupon2-coupon-code {\n            font-weight: bold;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"coupon2-main-container\">\n        <div class=\"coupon2\">\n            <div class=\"coupon2-icon\"><img src=\"https://cdn.shopify.com/s/files/1/0271/2636/6307/files/discount.png?v=1721712141\" alt=\"\"></div>\n            <div class=\"coupon2-text\">\n                Get Flat 10% off on your first order. <br> Use Code: <span class=\"coupon2-coupon-code\">HELLO10</span>\n            </div>\n        </div>\n        <div class=\"coupon2\">\n            <div class=\"coupon2-icon\"><img src=\"https://cdn.shopify.com/s/files/1/0271/2636/6307/files/discount.png?v=1721712141\" alt=\"\"></div>\n            <div class=\"coupon2-text\">\n                5% off for returning customers shopping above 3000₹. <span class=\"coupon2-coupon-code\"><br>Applied on Your Chekout</span>\n            </div>\n        </div>\n        <div class=\"coupon2\">\n            <div class=\"coupon2-icon\"><img src=\"https://cdn.shopify.com/s/files/1/0271/2636/6307/files/discount.png?v=1721712141\" alt=\"\"></div>\n            <div class=\"coupon2-text\">\n                Get 10% off on purchase of 3-6 Pigtail bows. <br>Use Code: <span class=\"coupon2-coupon-code\">PIGTAILS</span>\n            </div>\n        </div>\n        <div class=\"coupon2\">\n            <div class=\"coupon2-icon\"><img src=\"https://cdn.shopify.com/s/files/1/0271/2636/6307/files/discount.png?v=1721712141\" alt=\"\"></div>\n            <div class=\"coupon2-text\">\n                Get 14% off on purchase of 7+ Pigtail bows <br>Use Code: <span class=\"coupon2-coupon-code\">PIGTAILS7</span>\n            </div>\n        </div>\n    </div>\n</body>\n</html>"
+          }
         }
       },
       "block_order": [
@@ -77,7 +83,8 @@
         "short_description_cnV4fV",
         "buy_buttons",
         "variant_picker",
-        "addons"
+        "addons",
+        "custom_liquid_qpXfaH"
       ],
       "settings": {
         "container": "container",
