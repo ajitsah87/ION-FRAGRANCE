@@ -49,6 +49,7 @@
     },
     "background_model_9ywmNj": {
       "type": "background-model",
+      "disabled": true,
       "settings": {
         "flex_direction_row": true,
         "default_background_image": "shopify://shop_images/S4_Static_Box_BG_2.png",
