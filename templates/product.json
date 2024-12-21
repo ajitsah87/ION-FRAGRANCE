@@ -68,6 +68,12 @@
             "show_social": true
           }
         },
+        "custom_liquid_ciTqYW": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p>\n{{product.metafields}}\n</p>"
+          }
+        },
         "custom_liquid_qpXfaH": {
           "type": "custom_liquid",
           "settings": {
@@ -84,6 +90,7 @@
         "buy_buttons",
         "variant_picker",
         "addons",
+        "custom_liquid_ciTqYW",
         "custom_liquid_qpXfaH"
       ],
       "settings": {
