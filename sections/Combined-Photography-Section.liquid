@@ -207,25 +207,8 @@
       display: block;
       padding-bottom:3rem;
     }
-  }
-
-  @media (max-width: 1024px) {
     .display-container {
       height: 500px;
-    }
-
-    .bottle-image {
-      height: 250px;
-    }
-
-    .bottles-container {
-      gap: 1.5rem;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .display-container {
-      height: 400px;
     }
 
     .content-wrapper {
@@ -235,18 +218,23 @@
     .bottles-container {
       width: 100%;
       gap: 1rem;
-      padding: 1rem;
+      padding: 1rem 1rem 0 1rem ;
       flex-wrap: wrap;
+      align-items: end;
     }
 
     .bottle-image {
       height: 150px;
     }
+    .bottle-wrapper{
+      height: 80%;
+    }
 
     .bottle-wrapper:hover {
-      transform: scale(1.15);
+      transform: scale(1.1);
     }
   }
+  
 
   @media (max-width: 480px) {
     .display-container {
