@@ -1,25 +1,25 @@
-<div class="photography-section">
-  <div class="display-container">
-    <div class="content-wrapper">
-      <div class="perfume-container">
+<div class="male-photography-section">
+  <div class="male-display-container">
+    <div class="male-content-wrapper">
+      <div class="male-perfume-container">
         {% assign bottles = 'Action, Revolution, Lion, Potion' | split: ', ' %}
         {% for bottle in bottles %}
           {% assign bottle_image = 'bottle_' | append: bottle | downcase | append: '_image' %}
-          <div class="bottle-wrapper" data-bottle="{{ bottle | downcase }}">
+          <div class="male-bottle-wrapper" data-bottle="{{ bottle | downcase }}">
             <img
               src="{{ section.settings[bottle_image] | image_url }}"
               alt="{{ bottle }}"
-              class="bottle-image"
+              class="male-bottle-image"
             >
           </div>
         {% endfor %}
       </div>
 
-      <div class="background-container">
+      <div class="male-background-container">
         <img
           src="{{ section.settings.default_background_image | image_url }}"
           alt="Default Background"
-          class="background-image"
+          class="male-background-image"
           id="default-background"
         >
         {% for bottle in bottles %}
@@ -27,7 +27,7 @@
           <img
             src="{{ section.settings[background_image] | image_url }}"
             alt="{{ bottle }} Background"
-            class="background-image model-background"
+            class="male-background-image male-model-background"
             data-bottle="{{ bottle | downcase }}"
           >
         {% endfor %}
@@ -37,13 +37,13 @@
 </div>
 
 <style>
-    .photography-section {
+    .male-photography-section {
       max-width: 1600px;
       margin: 0 auto;
-  padding-bottom:40px;
+      padding-bottom: 40px;
       background: #ffffff;
     }
-    .display-container {
+    .male-display-container {
       position: relative;
       width: 100%;
       height: 600px;
@@ -51,17 +51,16 @@
       overflow: hidden;
     }
 
-    .content-wrapper {
+    .male-content-wrapper {
       position: relative;
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: flex-end;
       flex-direction: {% if section.settings.flex_direction_row %}row{% else %}row-reverse{% endif %};
-
     }
 
-    .perfume-container {
+    .male-perfume-container {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -69,29 +68,24 @@
       z-index: 2;
     }
 
-    .bottle-wrapper {
+    .male-bottle-wrapper {
       cursor: pointer;
       transition: transform 0.3s ease;
       flex-basis: 15%;
       aspect-ratio: 9/16;
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
     }
 
-    .bottle-wrapper:hover {
+    .male-bottle-wrapper:hover {
       transform: scale(1.25);
     }
 
-    .bottle-image {
+    .male-bottle-image {
       height: 300px;
       width: auto;
       object-fit: contain;
     }
 
-    .background-container {
+    .male-background-container {
       position: absolute;
       top: 0;
       left: 0;
@@ -100,7 +94,7 @@
       z-index: 1;
     }
 
-    .background-image {
+    .male-background-image {
       position: absolute;
       top: 0;
       left: 0;
@@ -114,25 +108,26 @@
     #default-background {
       opacity: 1;
     }
+
     @media (max-width: 992px) {
-    .photography-section{
-display: none;
+      .male-photography-section {
+        display: none;
+      }
     }
-     }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const bottleWrappers = document.querySelectorAll('.bottle-wrapper');
+    const bottleWrappers = document.querySelectorAll('.male-bottle-wrapper');
     const defaultBackground = document.getElementById('default-background');
     
     bottleWrappers.forEach(wrapper => {
       wrapper.addEventListener('mouseenter', () => {
         const bottleType = wrapper.getAttribute('data-bottle');
-        const targetBackground = document.querySelector(`.model-background[data-bottle="${bottleType}"]`);
+        const targetBackground = document.querySelector(`.male-model-background[data-bottle="${bottleType}"]`);
         
         defaultBackground.style.opacity = '0';
-        document.querySelectorAll('.model-background').forEach(bg => {
+        document.querySelectorAll('.male-model-background').forEach(bg => {
           bg.style.opacity = '0';
         });
         
@@ -142,13 +137,11 @@ display: none;
       });
 
       wrapper.addEventListener('mouseleave', () => {
-        document.querySelectorAll('.model-background').forEach(bg => {
+        document.querySelectorAll('.male-model-background').forEach(bg => {
           bg.style.opacity = '0';
         });
         defaultBackground.style.opacity = '1';
       });
-
-     
     });
   });
 </script>
@@ -157,13 +150,12 @@ display: none;
 {
   "name": "Male Model Photography",
   "settings": [
-      {
-        "type": "checkbox",
-        "id": "flex_direction_row",
-        "label": "Direction",
-        "default": true
+    {
+      "type": "checkbox",
+      "id": "flex_direction_row",
+      "label": "Direction",
+      "default": true
     },
-
     {
       "type": "image_picker",
       "id": "default_background_image",
@@ -212,7 +204,7 @@ display: none;
   ],
   "presets": [
     {
-      "name": "Male Model Photography",
+      "name": "Male Model",
       "category": "Custom Sections"
     }
   ]
