@@ -19,14 +19,6 @@
         "description": "<p>Posuere in netus a eu varius adipiscing suspendisse elementum vitae tempor suspendisse <br/>ullamcorper aenean taciti morbi potenti.</p>"
       }
     },
-    "custom_banner_section_waUtJr": {
-      "type": "Custom-Banner-Section",
-      "settings": {
-        "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
-        "button_text": "EXPLORE",
-        "button_link": ""
-      }
-    },
     "fragrance_box_hPzgF9": {
       "type": "Fragrance-box",
       "settings": {
@@ -40,6 +32,17 @@
         "mens_sale_price": "1,345",
         "womens_regular_price": "1,799",
         "womens_sale_price": "1,345"
+      }
+    },
+    "custom_banner_section_waUtJr": {
+      "type": "Custom-Banner-Section",
+      "custom_css": [
+        ".banner{margin-bottom:2rem;}"
+      ],
+      "settings": {
+        "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
+        "button_text": "EXPLORE",
+        "button_link": ""
       }
     },
     "dual_banner_qdGGMa": {
