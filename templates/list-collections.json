@@ -44,6 +44,7 @@
     },
     "dual_banner_qdGGMa": {
       "type": "Dual-banner",
+      "disabled": true,
       "settings": {
         "banner_height": 300,
         "him_heading": "FOR HIM",
@@ -55,8 +56,8 @@
   },
   "order": [
     "main",
-    "custom_banner_section_waUtJr",
     "fragrance_box_hPzgF9",
+    "custom_banner_section_waUtJr",
     "dual_banner_qdGGMa"
   ]
 }
