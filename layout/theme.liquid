@@ -91,6 +91,13 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
       <div id="cart-drawer-container"></div>
     </main>
 
+    <style>
+      #MainContent {
+        max-width: {% if template == 'product' %}1200px{% else %}auto{% endif %};
+        margin-inline: auto;
+      }
+    </style>
+
     {%- liquid
       section 'footer'
       section 'mobile-sticky-bar'
