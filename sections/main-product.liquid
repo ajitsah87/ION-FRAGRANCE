@@ -149,6 +149,9 @@
         {% render 'form__ask-a-question' %}
         {% break %}
       {% endif %}
+      {% if block.type == "accordion" %}
+        {% render 'accordion': data: '[{ques: "how it work", ans: "thi is how"}]' %}
+      {% endif %}
     {%- endfor -%}
   </div>
 
@@ -518,6 +521,10 @@
           ]
         }
       ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion"
     },
     {
       "type": "custom_text",
