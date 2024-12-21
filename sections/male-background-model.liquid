@@ -37,83 +37,89 @@
 </div>
 
 <style>
+  .male-photography-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background: #ffffff;
+  }
+
+  .male-display-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .male-content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: {% if section.settings.flex_direction_row %}row{% else %}row-reverse{% endif %};
+  }
+
+  .male-perfume-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    z-index: 2;
+  }
+
+  .male-bottle-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-basis: 15%;
+    aspect-ratio: 9/16;
+  }
+
+  .male-bottle-wrapper img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .male-bottle-wrapper:hover {
+    transform: scale(1.25);
+  }
+
+  .male-bottle-image {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .male-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .male-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #default-background {
+    opacity: 1;
+  }
+
+  @media (max-width: 992px) {
     .male-photography-section {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding-bottom: 40px;
-      background: #ffffff;
+      display: none;
     }
-    .male-display-container {
-      position: relative;
-      width: 100%;
-      height: 600px;
-      background: #fff;
-      overflow: hidden;
-    }
-
-    .male-content-wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: {% if section.settings.flex_direction_row %}row{% else %}row-reverse{% endif %};
-    }
-
-    .male-perfume-container {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 2rem;
-      z-index: 2;
-    }
-
-    .male-bottle-wrapper {
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      flex-basis: 15%;
-      aspect-ratio: 9/16;
-    }
-
-    .male-bottle-wrapper:hover {
-      transform: scale(1.25);
-    }
-
-    .male-bottle-image {
-      height: 300px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .male-background-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .male-background-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    #default-background {
-      opacity: 1;
-    }
-
-    @media (max-width: 992px) {
-      .male-photography-section {
-        display: none;
-      }
-    }
+  }
 </style>
 
 <script>
