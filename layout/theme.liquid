@@ -86,7 +86,7 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
     {% section 'custom-header' %}
     {% render 'scroll-top-button' %}
 
-    <main role="main" id="MainContent" style="padding-top: 0;">
+    <main role="main" id="MainContent" style="padding-top: {% if template != 'index' %}5rem{% else %}0{% endif %};">
       {{ content_for_layout }}
       <div id="cart-drawer-container"></div>
     </main>
