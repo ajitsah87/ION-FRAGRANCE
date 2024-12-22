@@ -21,6 +21,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "collapsible_tab_rDCFGJ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "NOTES",
+            "content": "<p>{{ product.metafields.custom.note | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -82,6 +91,7 @@
         }
       },
       "block_order": [
+        "collapsible_tab_rDCFGJ",
         "title",
         "text_NqHVKa",
         "price",
