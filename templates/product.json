@@ -30,6 +30,24 @@
             "default_open": false
           }
         },
+        "collapsible_tab_KzKbQ6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INGREDIENTS",
+            "content": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "collapsible_tab_NQVM6Q": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "REVIEWS",
+            "content": "<p>{{ product.metafields.custom.reviews | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -92,6 +110,8 @@
       },
       "block_order": [
         "collapsible_tab_rDCFGJ",
+        "collapsible_tab_KzKbQ6",
+        "collapsible_tab_NQVM6Q",
         "title",
         "text_NqHVKa",
         "price",
