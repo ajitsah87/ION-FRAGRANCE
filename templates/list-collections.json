@@ -11,6 +11,9 @@
   "sections": {
     "custom_liquid_gELf9E": {
       "type": "custom-liquid",
+      "custom_css": [
+        "div{margin-inline:auto}"
+      ],
       "settings": {
         "custom_liquid": "<div><h1>Fragrances</h1></div>",
         "custom_class": ""
