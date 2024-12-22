@@ -21,33 +21,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "collapsible_tab_rDCFGJ": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "NOTES",
-            "content": "<p>{{ product.metafields.custom.note | metafield_tag }}</p>",
-            "liquid": "",
-            "default_open": false
-          }
-        },
-        "collapsible_tab_KzKbQ6": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "INGREDIENTS",
-            "content": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
-            "liquid": "",
-            "default_open": false
-          }
-        },
-        "collapsible_tab_NQVM6Q": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "REVIEWS",
-            "content": "<p>{{ product.metafields.custom.reviews | metafield_tag }}</p>",
-            "liquid": "",
-            "default_open": false
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -59,16 +32,16 @@
             "text_style": "subtitle"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_saving": true
-          }
-        },
         "custom_liquid_ciTqYW": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<p>\n{{ product.metafields.custom.short_description }}\n</p>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_saving": true
           }
         },
         "rating_jpNJ7m": {
@@ -101,6 +74,33 @@
             "show_social": true
           }
         },
+        "collapsible_tab_rDCFGJ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "NOTES",
+            "content": "<p>{{ product.metafields.custom.note | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "collapsible_tab_KzKbQ6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INGREDIENTS",
+            "content": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
+        "collapsible_tab_NQVM6Q": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "REVIEWS",
+            "content": "<p>{{ product.metafields.custom.reviews | metafield_tag }}</p>",
+            "liquid": "",
+            "default_open": false
+          }
+        },
         "custom_liquid_qpXfaH": {
           "type": "custom_liquid",
           "settings": {
@@ -109,18 +109,18 @@
         }
       },
       "block_order": [
-        "collapsible_tab_rDCFGJ",
-        "collapsible_tab_KzKbQ6",
-        "collapsible_tab_NQVM6Q",
         "title",
         "text_NqHVKa",
-        "price",
         "custom_liquid_ciTqYW",
+        "price",
         "rating_jpNJ7m",
         "short_description_cnV4fV",
         "buy_buttons",
         "variant_picker",
         "addons",
+        "collapsible_tab_rDCFGJ",
+        "collapsible_tab_KzKbQ6",
+        "collapsible_tab_NQVM6Q",
         "custom_liquid_qpXfaH"
       ],
       "settings": {
