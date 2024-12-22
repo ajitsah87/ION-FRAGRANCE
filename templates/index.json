@@ -94,7 +94,6 @@
       "settings": {
         "men_text": "Explore for Men",
         "women_text": "Explore for Women",
-        "men_default_background": "shopify://shop_images/M_Closed_Box.webp",
         "bottle_action_image": "shopify://shop_images/Action_T.png",
         "background_action_image": "shopify://shop_images/ACTION_BG.png",
         "bottle_revolution_image": "shopify://shop_images/REVOLUTION_T.png",
