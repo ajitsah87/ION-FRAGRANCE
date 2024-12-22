@@ -14,6 +14,8 @@
             {% assign bottle_image = 'bottle_' | append: bottle | downcase | append: '_image' %}
             <div class="bottle-wrapper" data-bottle="{{ bottle | downcase }}">
               <img
+              height="100"
+              width="100"
                 src="{{ section.settings[bottle_image] | image_url }}"
                 alt="{{ bottle }}"
                 class="bottle-image"
@@ -24,6 +26,8 @@
 
         <div class="background-container">
           <img
+          height="100"
+          width="100"
             src="{{ section.settings.men_default_background | image_url }}"
             alt="Men Default Background"
             class="background-image"
@@ -32,6 +36,8 @@
           {% for bottle in men_bottles %}
             {% assign background_image = 'background_' | append: bottle | downcase | append: '_image' %}
             <img
+            height="100"
+            width="100"
               src="{{ section.settings[background_image] | image_url }}"
               alt="{{ bottle }} Background"
               class="background-image model-background"
@@ -53,6 +59,8 @@
             {% assign bottle_image = 'women_bottle_' | append: bottle | downcase | append: '_image' %}
             <div class="bottle-wrapper" data-bottle="{{ bottle | downcase }}">
               <img
+              height="100"
+              width="100"
                 src="{{ section.settings[bottle_image] | image_url }}"
                 alt="{{ bottle }}"
                 class="bottle-image"
@@ -63,6 +71,8 @@
 
         <div class="background-container">
           <img
+          height="100"
+          width="100"
             src="{{ section.settings.women_default_background | image_url }}"
             alt="Women Default Background"
             class="background-image"
@@ -71,6 +81,8 @@
           {% for bottle in women_bottles %}
             {% assign background_image = 'women_background_' | append: bottle | downcase | append: '_image' %}
             <img
+            height="100"
+            width="100"
               src="{{ section.settings[background_image] | image_url }}"
               alt="{{ bottle }} Background"
               class="background-image model-background"
@@ -146,32 +158,31 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+
+    .bottles-container {
+      display: flex;
+      position: relative;
+      z-index: 2;
+
+      .bottle-wrapper {
+          flex-grow: 1;
+          aspect-ratio: 1;
+          cursor: pointer;
+          
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            transition: transform .3s ease-in-out;
+          }
+
+          &:hover img {
+            transform: scale(1.2);
+          }
+      }
+    }
   }
 
-  .bottles-container {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    z-index: 2;
-  }
-
-  .bottle-wrapper {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .bottle-wrapper:hover {
-    transform: scale(1.25);
-  }
-
-  .bottle-image {
-    height: 300px;
-    width: auto;
-    object-fit: contain;
-  }
 
   .background-container {
     position: absolute;
@@ -215,24 +226,6 @@
       flex-direction: column;
     }
 
-    .bottles-container {
-      width: 100%;
-      gap: 1rem;
-      padding: 1rem 1rem 0 1rem ;
-      flex-wrap: wrap;
-      align-items: end;
-    }
-
-    .bottle-image {
-      height: 150px;
-    }
-    .bottle-wrapper{
-      height: 80%;
-    }
-
-    .bottle-wrapper:hover {
-      transform: scale(1.1);
-    }
   }
   
 
@@ -241,13 +234,7 @@
       height: 350px;
     }
 
-    .bottle-image {
-      height: 120px;
-    }
 
-    .bottles-container {
-      gap: 0.75rem;
-    }
 
     .gender-toggle {
       gap: 1rem;
@@ -312,11 +299,6 @@
           bg.style.opacity = '0';
         });
         defaultBackground.style.opacity = '1';
-      });
-
-      wrapper.addEventListener('click', () => {
-        const bottleType = wrapper.dataset.bottle;
-        window.location.href = `/products/${bottleType}`;
       });
     });
   });
