@@ -57,7 +57,7 @@
     data-enable-video-autoplay="{{ section.settings.enable_video_autoplay }}">
     <div class="main-product__blocks">
       {%- for block in section.blocks -%}
-        <div class="main-product__block main-product__block-{{ block.type }}" {{ block.shopify_attributes }} style="margin-top: 10px;">
+        <div class="main-product__block main-product__block-{{ block.type }}" {{ block.shopify_attributes }} style="margin-top: 0px;">
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
@@ -666,3 +666,27 @@
   </div>
 {% endif %}
 {% comment %} End comment {% endcomment %}
+
+
+
+
+{% comment %} // modifying default text for Buy it now {% endcomment %}
+
+<style> 
+	.shopify-payment-button__button--unbranded {
+		font-size: 0 !important;		
+	}
+	.shopify-payment-button__button--unbranded::before {
+		content: 'Buy Now';
+		position: absolute;    
+		visibility: visible;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		font-size: 14px;
+		display: contents;
+	}
+</style>
+
+
+{% comment %} ============================= {% endcomment %}

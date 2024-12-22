@@ -129,7 +129,7 @@
               assign on_sale = true
             endif
           -%}
-          <div class="sf-prod__info-wrapper">
+          <div class="sf-prod__info-wrapper" style="margin-top: 0;">
             <div class="sf-prod__info{% if on_sale %} sf-product--onsale{% endif %}">
               {% render 'main-product-blocks', section: section, product: product, is_preorder: is_preorder %}
               <div class="addons-block">
