@@ -15,9 +15,7 @@
     },
     "custom_code_s2_KgDqMT": {
       "type": "Custom-code-s2",
-      "custom_css": [
-        "@media (max-width: 578px) {.custom-text-section{padding-block: 3rem !impotant; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "FRAGRANCE FOR THE FEARLESS",
         "paragraph": "Each fragrance is carefully formulated with the highest quality ingredients,\nushering in a new era of perfumes for those who appreciate the finest in life.",
