@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "custom_liquid_gELf9E": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div><h1>Fragrances</h1></div>",
+        "custom_class": ""
+      }
+    },
     "main": {
       "type": "collection-list-template",
       "disabled": true,
@@ -37,7 +44,7 @@
     "custom_banner_section_waUtJr": {
       "type": "Custom-Banner-Section",
       "custom_css": [
-        ".banner{margin-bottom:2rem;}"
+        ".banner {margin-bottom: 2rem;}"
       ],
       "settings": {
         "desktop_image": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png",
@@ -58,6 +65,7 @@
     }
   },
   "order": [
+    "custom_liquid_gELf9E",
     "main",
     "fragrance_box_hPzgF9",
     "custom_banner_section_waUtJr",
