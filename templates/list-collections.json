@@ -11,7 +11,12 @@
   "sections": {
     "custom_liquid_gELf9E": {
       "type": "custom-liquid",
-      "custom_css": [],
+      "custom_css": [
+        ".center-container {width: 100%; height: 100vh; text-align: center; display: table; }",
+        ".center-container h1 {display: table-cell; vertical-align: middle; font-size: 3rem; color: #333; margin: 0; padding: 20px 0; }",
+        "@media (max-width: 768px) {.center-container h1 {font-size: 2rem; }}",
+        "@media (max-width: 480px) {.center-container h1 {font-size: 1.5rem; }}"
+      ],
       "settings": {
         "custom_liquid": "<div class=\"center-container\">\n    <h1 class=\"centered-heading\">Fragrance</h1>\n  </div>",
         "custom_class": ""
