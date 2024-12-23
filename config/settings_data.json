@@ -227,7 +227,7 @@
             "type": "menu",
             "settings": {
               "menu": "support",
-              "title": "SUPPORT",
+              "title": "",
               "width": "25%",
               "order_first": false,
               "open_default": false
