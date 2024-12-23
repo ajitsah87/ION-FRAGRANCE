@@ -6,3 +6,6 @@
 .main-product__block.main-product__block-text {
     margin-top: 0 !important;
 }
+.collapsible__button{
+    font-weight: 400 !important;
+}
