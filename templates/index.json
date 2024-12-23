@@ -155,7 +155,7 @@
     "custom_banner_section_HMUzUm": {
       "type": "Custom-Banner-Section",
       "settings": {
-        "desktop_image": "shopify://shop_images/Male_Box1.png",
+        "desktop_image": "shopify://shop_images/female_box1.png",
         "button_text": "EXPLORE",
         "button_link": ""
       }
