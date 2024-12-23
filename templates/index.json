@@ -67,7 +67,7 @@
     "custom_liquid_YdbBGG": {
       "type": "custom-liquid",
       "custom_css": [
-        "p{text-align:center; padding-bottom:5rem;}"
+        "p {text-align: center; padding-block: 5rem; font-size:1.2rem}"
       ],
       "settings": {
         "custom_liquid": "<p>Meticulously curated to reflect your individuality in Every Mood.</p>",
