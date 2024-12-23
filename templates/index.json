@@ -67,7 +67,7 @@
     "custom_liquid_YdbBGG": {
       "type": "custom-liquid",
       "custom_css": [
-        "p {text-align: center; padding-block: 5rem; font-size: 1.2rem; color:#333}",
+        "p {text-align: center; padding-block: 5rem; font-size: 1.2rem; color: #333;}",
         "@media (max-width: 578px) {p {font-size: 0.8rem; }}"
       ],
       "settings": {
@@ -118,7 +118,8 @@
     "custom_liquid_GHrEnA": {
       "type": "custom-liquid",
       "custom_css": [
-        "h2 {text-align: center; font-weight: 500; padding-bottom: 0.7rem; font-size: 2rem;}"
+        "h2 {text-align: center; font-weight: 500; padding-bottom: 0.7rem; font-size: 2rem;}",
+        "@media(max-width:768px){h2{font-size: 1.4rem; }}"
       ],
       "settings": {
         "custom_liquid": "<h2>FOR HIM</h2>",
