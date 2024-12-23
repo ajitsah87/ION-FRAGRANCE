@@ -218,7 +218,7 @@
               "form_style": "bordered",
               "show_social": false,
               "show_agree_checkbox": false,
-              "width": "33%",
+              "width": "25%",
               "order_first": true,
               "open_default": true
             }
