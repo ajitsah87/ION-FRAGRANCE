@@ -126,7 +126,6 @@
     },
     "custom_liquid_GHrEnA": {
       "type": "custom-liquid",
-      "disabled": true,
       "custom_css": [
         "h2 {text-align: center; font-weight: 500;}"
       ],
@@ -145,13 +144,20 @@
     },
     "custom_liquid_KeYj9N": {
       "type": "custom-liquid",
-      "disabled": true,
       "custom_css": [
         "h2 {text-align: center; font-weight: 500;}"
       ],
       "settings": {
         "custom_liquid": "<h2>FOR HER</h2>",
         "custom_class": ""
+      }
+    },
+    "custom_banner_section_HMUzUm": {
+      "type": "Custom-Banner-Section",
+      "settings": {
+        "desktop_image": "shopify://shop_images/Male_Box1.png",
+        "button_text": "EXPLORE",
+        "button_link": ""
       }
     },
     "1733908113d1a89df4": {
@@ -363,6 +369,7 @@
     "custom_liquid_GHrEnA",
     "custom_banner_section_bLcCab",
     "custom_liquid_KeYj9N",
+    "custom_banner_section_HMUzUm",
     "1733908113d1a89df4",
     "testimonials_d8iBjG",
     "testimonials_carousel_VLPcHc"
