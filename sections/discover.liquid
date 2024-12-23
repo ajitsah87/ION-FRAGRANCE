@@ -6,15 +6,17 @@
         <img
           src="{{ section.settings.mens_closed_image | img_url: '1000x' }}"
           alt="Men's Fragrance - Closed"
-          class="closed-box-image">
+          class="closed-box-image"
+        >
         <img
           src="{{ section.settings.mens_open_image | img_url: '1000x' }}"
           alt="Men's Fragrance - Open"
-          class="open-box-image">
+          class="open-box-image"
+        >
       </div>
       <div class="fragrance-details">
         <h2>Men’s Fragrance Set</h2>
-        <p>4x 30ml Exclusive Perfumes</p>
+        <p>4 X 30ml Exclusive Perfumes</p>
         <button class="discover-button">DISCOVER</button>
       </div>
     </a>
@@ -27,15 +29,17 @@
         <img
           src="{{ section.settings.womens_closed_image | img_url: '1000x' }}"
           alt="Women's Fragrance - Closed"
-          class="closed-box-image">
+          class="closed-box-image"
+        >
         <img
           src="{{ section.settings.womens_open_image | img_url: '1000x' }}"
           alt="Women's Fragrance - Open"
-          class="open-box-image">
+          class="open-box-image"
+        >
       </div>
       <div class="fragrance-details">
         <h2>Women’s Fragrance Set</h2>
-        <p>4x 30ml Exclusive Perfumes</p>
+        <p>4 X 30ml Exclusive Perfumes</p>
         <button class="discover-button">DISCOVER</button>
       </div>
     </a>
@@ -43,169 +47,166 @@
 </div>
 
 <style>
-  .fragrance-boxes {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 0 2rem 3rem;
-  }
-
-  .fragrance-box {
-    text-align: center;
-    width: 100%;
-    /* max-height: 600px; */
-    max-width: 700px;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  .fragrance-box a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .image-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  }
-
-  .image-container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease
-    , transform 0.5s ease;
-  }
-
-  .open-box-image {
-    opacity: 0;
-  }
-
-  .image-container:hover .closed-box-image {
-    opacity: 0;
-  }
-
-  .image-container:hover .open-box-image {
-    opacity: 1;
-  }
-
-  .fragrance-details {
-    /* margin-top: 20px; */
-    h2 {
-      font-size: 2rem;
+    .fragrance-boxes {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      gap: 20px;
+      padding: 0 2rem 3rem;
     }
-  }
-  .discover-button {
-  background-color: black;
-  color: white;
-  padding: 8px 16px;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-  @media (max-width: 992px) {
+
+    .fragrance-box {
+      text-align: center;
+      width: 100%;
+      /* max-height: 600px; */
+      max-width: 700px;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .fragrance-box a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .image-container {
-      aspect-ratio: 1 / 1;
-      height: auto;
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease
+      , transform 0.5s ease;
+    }
+
+    .open-box-image {
+      opacity: 0;
+    }
+
+    .image-container:hover .closed-box-image {
+      opacity: 0;
+    }
+
+    .image-container:hover .open-box-image {
+      opacity: 1;
+    }
+
+    .fragrance-details {
+      /* margin-top: 20px; */
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .discover-button {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+    @media (max-width: 992px) {
+      .image-container {
+        aspect-ratio: 1 / 1;
+        height: auto;
+      }
+      .fragrance-details {
+        h2 {
+          font-size: 1.4rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .discover-button {
+
+
+    font-size: 0.9rem;
+
+
+  }
+      }
+
+    }
+
+  @media (max-width: 610px) {
+    .fragrance-boxes {
+      gap: 3px;
+      padding: 0;
+      .fragrance-box {
+        padding: 2px;
+      }
     }
     .fragrance-details {
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       p {
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
       .discover-button {
 
-      
-  font-size: 0.9rem;
 
-  
-}
-    }
+    font-size: 0.8rem;
+
 
   }
-
-@media (max-width: 610px) {
-  .fragrance-boxes {
-    gap: 3px;
-    padding: 0;
-    .fragrance-box {
-      padding: 2px;
     }
   }
-  .fragrance-details {
-    h2 {
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-    .discover-button {
-
-      
-  font-size: 0.8rem;
-
-  
-}
-  }
-}
-@media(max-width: 422px) {
-  .fragrance-details {
-    h2 {
-      font-size: 1rem;
+  @media(max-width: 422px) {
+    .fragrance-details {
+      h2 {
+        font-size: 1rem;
+      }
     }
   }
-}
-
 </style>
 
 {% schema %}
-  {
-    "name": "Fragrance Boxes",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "mens_closed_image",
-        "label": "Men's Fragrance - Closed Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "mens_open_image",
-        "label": "Men's Fragrance - Open Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "womens_closed_image",
-        "label": "Women's Fragrance - Closed Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "womens_open_image",
-        "label": "Women's Fragrance - Open Image"
-      }, {
-        "type": "url",
-        "id": "mens_collection_url",
-        "label": "Men's Collection URL"
-      }, {
-        "type": "url",
-        "id": "womens_collection_url",
-        "label": "Women's Collection URL"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Discover",
-        "category": "Custom Sections"
-      }
-    ]
-  }
-
-
+{
+  "name": "Fragrance Boxes",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "mens_closed_image",
+      "label": "Men's Fragrance - Closed Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mens_open_image",
+      "label": "Men's Fragrance - Open Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "womens_closed_image",
+      "label": "Women's Fragrance - Closed Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "womens_open_image",
+      "label": "Women's Fragrance - Open Image"
+    }, {
+      "type": "url",
+      "id": "mens_collection_url",
+      "label": "Men's Collection URL"
+    }, {
+      "type": "url",
+      "id": "womens_collection_url",
+      "label": "Women's Collection URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Discover",
+      "category": "Custom Sections"
+    }
+  ]
+}
 {% endschema %}
