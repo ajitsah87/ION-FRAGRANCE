@@ -189,12 +189,11 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "menu_tYFyMy": {
-            "type": "menu",
-            "disabled": true,
+          "custom_html_JAdYUg": {
+            "type": "custom_html",
             "settings": {
-              "menu": "about-us",
               "title": "",
+              "html": "<img class=\"f-a\"  src=\"https://cdn.shopify.com/s/files/1/0620/2389/3070/files/7bd0e531c3aa65d29c3993ba8644ca39.svg?v=1724316271\" />\n<style>\n.f-a{\nheight: 50px;\nmargin-inline: auto;\n}\n</style>",
               "width": "25%",
               "order_first": false,
               "open_default": false
@@ -210,16 +209,6 @@
               "open_default": false
             }
           },
-          "custom_html_JAdYUg": {
-            "type": "custom_html",
-            "settings": {
-              "title": "",
-              "html": "<img class=\"f-a\"  src=\"https://cdn.shopify.com/s/files/1/0620/2389/3070/files/7bd0e531c3aa65d29c3993ba8644ca39.svg?v=1724316271\" />\n<style>\n.f-a{\nheight: 50px;\nmargin-inline: auto;\n}\n</style>",
-              "width": "25%",
-              "order_first": false,
-              "open_default": false
-            }
-          },
           "newsletter_ggTQfp": {
             "type": "newsletter",
             "settings": {
@@ -229,7 +218,7 @@
               "form_style": "bordered",
               "show_social": false,
               "show_agree_checkbox": false,
-              "width": "25%",
+              "width": "33%",
               "order_first": true,
               "open_default": true
             }
@@ -246,9 +235,8 @@
           }
         },
         "block_order": [
-          "menu_tYFyMy",
-          "7ebc2f78-975b-4a81-b874-103c3355a866",
           "custom_html_JAdYUg",
+          "7ebc2f78-975b-4a81-b874-103c3355a866",
           "newsletter_ggTQfp",
           "menu_rx4t8P"
         ],
