@@ -134,6 +134,16 @@
         "custom_class": ""
       }
     },
+    "custom_liquid_KeYj9N": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {text-align: center; font-weight: 500;}"
+      ],
+      "settings": {
+        "custom_liquid": "<h2>FOR HER</h2>",
+        "custom_class": ""
+      }
+    },
     "1733908113d1a89df4": {
       "type": "apps",
       "blocks": {
@@ -341,6 +351,7 @@
     "combined_photography_section_MatjmQ",
     "dual_banner_Cfc39P",
     "custom_liquid_GHrEnA",
+    "custom_liquid_KeYj9N",
     "1733908113d1a89df4",
     "testimonials_d8iBjG",
     "testimonials_carousel_VLPcHc"
