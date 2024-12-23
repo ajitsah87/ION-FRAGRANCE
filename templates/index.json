@@ -67,7 +67,7 @@
     "custom_liquid_YdbBGG": {
       "type": "custom-liquid",
       "custom_css": [
-        "p {text-align: center; padding-block: 5rem; font-size:1.2rem}"
+        "p {text-align: center; padding-block: 5rem; font-size: 1.2rem;}"
       ],
       "settings": {
         "custom_liquid": "<p>Meticulously curated to reflect your individuality in Every Mood.</p>",
@@ -122,6 +122,16 @@
         "him_banner": "shopify://shop_images/Screenshot_2024-12-10_at_8.29.21_PM_1.png",
         "her_heading": "FOR HER",
         "her_banner": "shopify://shop_images/Screenshot_2024-12-10_at_5.36.42_PM_1_34a54ddd-1710-4477-96ca-48638f2630f2.png"
+      }
+    },
+    "custom_liquid_GHrEnA": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h2 {text-align: center; font-weight: 500;}"
+      ],
+      "settings": {
+        "custom_liquid": "<h2>FOR HIM</h2>",
+        "custom_class": ""
       }
     },
     "1733908113d1a89df4": {
@@ -330,6 +340,7 @@
     "female_background_model_49TLaB",
     "combined_photography_section_MatjmQ",
     "dual_banner_Cfc39P",
+    "custom_liquid_GHrEnA",
     "1733908113d1a89df4",
     "testimonials_d8iBjG",
     "testimonials_carousel_VLPcHc"

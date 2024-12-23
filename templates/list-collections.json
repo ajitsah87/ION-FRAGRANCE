@@ -49,6 +49,7 @@
     },
     "custom_banner_section_waUtJr": {
       "type": "Custom-Banner-Section",
+      "disabled": true,
       "custom_css": [
         ".banner {margin-bottom: 2rem;}"
       ],
