@@ -173,7 +173,8 @@
         "instafeed_app_block_dAV4T4"
       ],
       "custom_css": [
-        "@media (min-width: 992px) {.container-fluid {padding-inline: 12.1rem; }}"
+        "@media (min-width: 992px) {.container-fluid {padding-inline: 12.1rem; }}",
+        "@media (max-width: 768px) {h2 {line-height: 1; font-size: 1.4rem; padding-top: 2rem; }}"
       ],
       "settings": {
         "heading": "",
