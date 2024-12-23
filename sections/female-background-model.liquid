@@ -37,88 +37,88 @@
 </div>
 
 <style>
-   .female-photography-section {
-     max-width: 1600px;
-     margin: 0 auto;
-     padding-bottom:40px;
-     background: #ffffff;
-   }
-   .female-display-container {
-     position: relative;
-     width: 100%;
-     height: 600px;
-     background: #fff;
-     overflow: hidden;
-   }
-
-   .female-content-wrapper {
-     position: relative;
-     width: 100%;
-     height: 100%;
-     display: flex;
-     justify-content: flex-end;
-     flex-direction: {% if section.settings.female_direction_row %}row{% else %}row-reverse{% endif %};
-   }
-
-  .female-bottles-container {
-    display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 2rem;
-      z-index: 2;
-   }
-
-   .female-bottle-wrapper {
-    cursor: pointer;
-      transition: transform 0.3s ease;
-      flex-basis: 15%;
-      aspect-ratio: 9/16;
-
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-   }
-
-   .female-bottle-wrapper:hover {
-     transform: scale(1.25);
-   }
-
-   .female-bottle-image {
-     height: 300px;
-     width: auto;
-     object-fit: contain;
-   }
-
-   .female-background-container {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     z-index: 1;
-   }
-
-   .female-background-image {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     opacity: 0;
-     transition: opacity 0.5s ease;
-   }
-
-   #female-default-background {
-     opacity: 1;
-   }
-
-   @media (max-width: 992px) {
-    .female-photography-section{
-display: none;
-    }
+     .female-photography-section {
+       width: 100%;
+       margin: 0 auto;
+       padding-bottom:40px;
+       background: #ffffff;
      }
+     .female-display-container {
+       position: relative;
+       width: 100%;
+       height: 600px;
+       background: #fff;
+       overflow: hidden;
+     }
+
+     .female-content-wrapper {
+       position: relative;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       justify-content: flex-end;
+       flex-direction: {% if section.settings.female_direction_row %}row{% else %}row-reverse{% endif %};
+     }
+
+    .female-bottles-container {
+      display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem;
+        z-index: 2;
+     }
+
+     .female-bottle-wrapper {
+      cursor: pointer;
+        transition: transform 0.3s ease;
+        flex-basis: 15%;
+        aspect-ratio: 9/16;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+     }
+
+     .female-bottle-wrapper:hover {
+       transform: scale(1.25);
+     }
+
+     .female-bottle-image {
+       height: 300px;
+       width: auto;
+       object-fit: contain;
+     }
+
+     .female-background-container {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: 1;
+     }
+
+     .female-background-image {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       opacity: 0;
+       transition: opacity 0.5s ease;
+     }
+
+     #female-default-background {
+       opacity: 1;
+     }
+
+     @media (max-width: 992px) {
+      .female-photography-section{
+  display: none;
+      }
+       }
 </style>
 
 <script>
