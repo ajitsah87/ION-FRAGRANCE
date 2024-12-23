@@ -57,7 +57,7 @@
     data-enable-video-autoplay="{{ section.settings.enable_video_autoplay }}">
     <div class="main-product__blocks">
       {%- for block in section.blocks -%}
-        <div class="main-product__block main-product__block-{{ block.type }}" {{ block.shopify_attributes }} style="margin-top: 0px;">
+        <div class="main-product__block main-product__block-{{ block.type }}" {{ block.shopify_attributes }} style="margin-top: 20px;">
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}

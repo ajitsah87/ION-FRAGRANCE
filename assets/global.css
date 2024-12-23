@@ -1,0 +1,8 @@
+/* product page: main-product-blocks */
+
+.main-product__block.main-product__block-title {
+    margin-top: 0 !important;
+}
+.main-product__block.main-product__block-text {
+    margin-top: 0 !important;
+}

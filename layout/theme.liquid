@@ -45,6 +45,7 @@ template-{{ template.name | handle }} {{ template.name }}-{{ template.suffix }} 
     {{ 'custom-header.css' | asset_url | stylesheet_tag }}
     {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'chunk.css' | asset_url | stylesheet_tag }}
+    {{ 'global.css' | asset_url | stylesheet_tag }}
 
     {% render 'style-tags' %}
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
