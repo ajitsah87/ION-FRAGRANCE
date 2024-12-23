@@ -129,7 +129,7 @@
       "settings": {
         "desktop_image": "shopify://shop_images/Male_Box1.png",
         "button_text": "EXPLORE",
-        "button_link": ""
+        "button_link": "shopify://products/men-s-fragrance-set"
       }
     },
     "custom_liquid_KeYj9N": {
@@ -147,7 +147,7 @@
       "settings": {
         "desktop_image": "shopify://shop_images/female_box1.png",
         "button_text": "EXPLORE",
-        "button_link": ""
+        "button_link": "shopify://products/women-s-fragrance-set"
       }
     },
     "1733908113d1a89df4": {
@@ -170,7 +170,7 @@
         "instafeed_app_block_dAV4T4"
       ],
       "custom_css": [
-        "@media (min-width: 992px) {.container-fluid {padding-inline: 8.1rem; }}"
+        "@media (min-width: 992px) {.container-fluid {padding-inline: 12.1rem; }}"
       ],
       "settings": {
         "heading": "",
