@@ -64,6 +64,16 @@
         "background_potion_image": "shopify://shop_images/POTION_BG.png"
       }
     },
+    "custom_liquid_YdbBGG": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "p{text-align:center; padding-bottom:5rem;}"
+      ],
+      "settings": {
+        "custom_liquid": "<p>Meticulously curated to reflect your individuality in Every Mood.</p>",
+        "custom_class": ""
+      }
+    },
     "female_background_model_49TLaB": {
       "type": "female-background-model",
       "settings": {
@@ -316,6 +326,7 @@
     "discover_8mUyY9",
     "male_background_model_WV4Ym9",
     "background_model_9ywmNj",
+    "custom_liquid_YdbBGG",
     "female_background_model_49TLaB",
     "combined_photography_section_MatjmQ",
     "dual_banner_Cfc39P",
