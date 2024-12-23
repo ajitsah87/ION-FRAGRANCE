@@ -117,7 +117,7 @@
     "custom_liquid_GHrEnA": {
       "type": "custom-liquid",
       "custom_css": [
-        "h2 {text-align: center; font-weight: 500; padding-bottom: .5rem; }"
+        "h2 {text-align: center; font-weight: 500; padding-bottom: 0.5rem; font-size:2.5rem;}"
       ],
       "settings": {
         "custom_liquid": "<h2>FOR HIM</h2>",
