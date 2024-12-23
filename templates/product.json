@@ -35,7 +35,7 @@
         "custom_liquid_ciTqYW": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p>\n{{ product.metafields.custom.short_description }}\n</p>"
+            "custom_liquid": "<p>\n{{ product.metafields.custom.short_d}}\n</p>"
           }
         },
         "price": {
