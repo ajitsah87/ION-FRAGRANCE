@@ -135,7 +135,7 @@
     "custom_liquid_KeYj9N": {
       "type": "custom-liquid",
       "custom_css": [
-        "h2 {text-align: center; font-weight: 500; padding-block:2rem;}"
+        "h2 {text-align: center; font-weight: 500; padding-block: 2rem;}"
       ],
       "settings": {
         "custom_liquid": "<h2>FOR HER</h2>",
@@ -170,7 +170,7 @@
         "instafeed_app_block_dAV4T4"
       ],
       "custom_css": [
-        "@media (min-width: 992px) {.container-fluid {padding-inline: 6.1rem; }}"
+        "@media (min-width: 992px) {.container-fluid {padding-inline: 8.1rem; }}"
       ],
       "settings": {
         "heading": "",
