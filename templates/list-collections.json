@@ -57,12 +57,21 @@
         "button_text": "",
         "button_link": ""
       }
+    },
+    "small_banner_section_xrmXnR": {
+      "type": "Small-Banner-Section",
+      "settings": {
+        "small_desktop_image": "shopify://shop_images/Phone_Banner_Fragrance_Page.webp",
+        "small_button_text": "EXPLORE",
+        "small_button_link": ""
+      }
     }
   },
   "order": [
     "custom_liquid_gELf9E",
     "main",
     "fragrance_box_hPzgF9",
-    "custom_banner_section_waUtJr"
+    "custom_banner_section_waUtJr",
+    "small_banner_section_xrmXnR"
   ]
 }
