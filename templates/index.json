@@ -22,6 +22,13 @@
         "padding": "80px 20px 80px"
       }
     },
+    "custom_liquid_rn3CFm": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"container\">\n    <div class=\"title\">FRAGRANCE FOR THE FEARLESS</div>\n    <div class=\"subtitle\">\n      Each fragrance is carefully formulated with the highest quality ingredients, ushering in a new era of perfumes for those who appreciate the finest in life.\n    </div>\n  </div>\n<style>\n    .container {\n      font-family: Arial, sans-serif;\n      display: flex;\n      flex-direction: column;\n      justify-content: center;\n      align-items: center;\n      text-align: center;\n      background-color: #f5f5f5;\n     \n    }\n    .title {\n      font-size: 20px; /* Fixed font size */\n      font-weight: bold;\n      color: #000;\n      margin-bottom: 10px;\n    }\n    .subtitle {\n      font-size: 14px; /* Fixed font size */\n      color: #333;\n      line-height: 1.5;\n      max-width: 600px;\n      margin: 0 auto;\n    }\n    /* Force fixed styles across all screen sizes */\n    @media (max-width: 1200px),\n           (max-width: 992px),\n           (max-width: 768px),\n           (max-width: 480px),\n           (max-width: 350px) {\n      .container {\n        height: 100vh;\n        padding: 0;\n      }\n      .title {\n        font-size: 20px;\n      }\n      .subtitle {\n        font-size: 14px;\n        max-width: 600px;\n      }\n    }\n  </style>",
+        "custom_class": ""
+      }
+    },
     "discover_8mUyY9": {
       "type": "discover",
       "settings": {
@@ -353,6 +360,7 @@
   "order": [
     "hero-bg-video",
     "custom_code_s2_KgDqMT",
+    "custom_liquid_rn3CFm",
     "discover_8mUyY9",
     "male_background_model_WV4Ym9",
     "background_model_9ywmNj",
