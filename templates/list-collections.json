@@ -62,7 +62,7 @@
       "type": "Small-Banner-Section",
       "settings": {
         "small_desktop_image": "shopify://shop_images/Phone_Banner_Fragrance_Page.webp",
-        "small_button_text": "EXPLORE",
+        "small_button_text": "",
         "small_button_link": ""
       }
     }
