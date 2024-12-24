@@ -22,6 +22,13 @@
         "padding": "80px 20px 80px"
       }
     },
+    "hero_text_section_PepUjA": {
+      "type": "Hero-Text-Section",
+      "settings": {
+        "heading": "FRAGRANCE FOR THE FEARLESS",
+        "subheading": "Each fragrance is carefully formulated with the highest quality ingredients, ushering in a new era of perfumes for those who appreciate the finest in life."
+      }
+    },
     "discover_8mUyY9": {
       "type": "discover",
       "settings": {
@@ -353,6 +360,7 @@
   "order": [
     "hero-bg-video",
     "custom_code_s2_KgDqMT",
+    "hero_text_section_PepUjA",
     "discover_8mUyY9",
     "male_background_model_WV4Ym9",
     "background_model_9ywmNj",

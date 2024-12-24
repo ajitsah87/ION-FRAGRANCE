@@ -17,7 +17,7 @@
   ],
   "presets": [
     {
-      "name": "Hero Text Section",
+          "name": "Hero Text Section",
       "category": "Text"
     }
   ]
@@ -38,16 +38,14 @@
   }
 
   .main-heading {
-    font-size: 32px;
+    font-size: clamp(16px, 5vw, 32px);
     line-height: 1.2;
     margin-bottom: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 100%;
   }
 
   .subheading {
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
     line-height: 1.5;
     max-width: 800px;
     margin: 0 auto;
@@ -57,9 +55,10 @@
     overflow: hidden;
   }
 
-  @media screen and (max-width: 768px) {
+  /* Ensure minimum font sizes on very small screens */
+  @media screen and (max-width: 480px) {
     .main-heading {
-      font-size: 24px;
+      font-size: 18px;
     }
 
     .subheading {
