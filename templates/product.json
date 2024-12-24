@@ -96,6 +96,15 @@
             "default_open": false
           }
         },
+        "collapsible_tab_6H36Rh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "LEGAL INFORMATION",
+            "content": "",
+            "liquid": "",
+            "default_open": false
+          }
+        },
         "custom_liquid_qpXfaH": {
           "type": "custom_liquid",
           "disabled": true,
@@ -117,6 +126,7 @@
         "addons",
         "collapsible_tab_rDCFGJ",
         "collapsible_tab_KzKbQ6",
+        "collapsible_tab_6H36Rh",
         "custom_liquid_qpXfaH"
       ],
       "settings": {
