@@ -27,8 +27,8 @@
         "mens_open_image": "shopify://shop_images/M_Closed_Box.webp",
         "womens_closed_image": "shopify://shop_images/F_Open_Box.webp",
         "womens_open_image": "shopify://shop_images/F_Closed_Box.webp",
-        "mens_collection_url": "",
-        "womens_collection_url": ""
+        "mens_collection_url": "shopify://products/men-s-fragrance-set",
+        "womens_collection_url": "shopify://products/women-s-fragrance-set"
       }
     },
     "male_background_model_WV4Ym9": {
@@ -140,14 +140,6 @@
         "small_button_link": ""
       }
     },
-    "small_banner_section_n6FDDq": {
-      "type": "Small-Banner-Section",
-      "settings": {
-        "small_desktop_image": "shopify://shop_images/Men_s_Banner-min_cad40b6f-7d5a-45a4-96cb-945f063b4b0a.webp",
-        "small_button_text": "EXPLORE",
-        "small_button_link": ""
-      }
-    },
     "custom_liquid_KeYj9N": {
       "type": "custom-liquid",
       "custom_css": [
@@ -165,6 +157,14 @@
         "desktop_image": "shopify://shop_images/Men_s_Banner-min_d5b5a99d-7f78-4aed-91ab-38bf8b92a747.webp",
         "button_text": "EXPLORE",
         "button_link": "shopify://products/women-s-fragrance-set"
+      }
+    },
+    "small_banner_section_n6FDDq": {
+      "type": "Small-Banner-Section",
+      "settings": {
+        "small_desktop_image": "shopify://shop_images/Men_s_Banner-min_cad40b6f-7d5a-45a4-96cb-945f063b4b0a.webp",
+        "small_button_text": "EXPLORE",
+        "small_button_link": ""
       }
     },
     "1733908113d1a89df4": {
