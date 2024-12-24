@@ -127,7 +127,7 @@
     "custom_banner_section_bLcCab": {
       "type": "Custom-Banner-Section",
       "settings": {
-        "desktop_image": "shopify://shop_images/Male_Box1.png",
+        "desktop_image": "shopify://shop_images/Men_s_Banner-min.webp",
         "button_text": "EXPLORE",
         "button_link": "shopify://products/men-s-fragrance-set"
       }
