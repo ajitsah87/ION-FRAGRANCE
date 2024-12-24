@@ -100,7 +100,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "LEGAL INFORMATION",
-            "content": "",
+            "content": "{{ product.metafields.custom.legal_info | metafield_tag }}",
             "liquid": "",
             "default_open": false
           }
