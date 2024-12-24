@@ -259,7 +259,7 @@
       "annoucement": {
         "type": "annoucement",
         "settings": {
-          "show_announcement": true,
+          "show_announcement": false,
           "homepage_only": true,
           "show_close": true,
           "message": "<span class=\"font-medium\" style=\"font-size: 15px;\">FLASH SALE: Upto 20% off on your First Purchase</span>",
