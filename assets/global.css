@@ -9,3 +9,13 @@
 .collapsible__button{
     font-weight: 400 !important;
 }
+
+/* footer section: footer-blocks */
+
+@media (min-width: 1000px) {
+    .sf-footer__accordion {
+        > div:last-child {
+            padding-left: 4rem;
+        }
+    }
+}
