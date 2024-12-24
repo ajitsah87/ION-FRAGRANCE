@@ -132,6 +132,14 @@
         "button_link": "shopify://products/men-s-fragrance-set"
       }
     },
+    "small_banner_section_TNtecY": {
+      "type": "Small-Banner-Section",
+      "settings": {
+        "small_desktop_image": "shopify://shop_images/Men_s_Banner-min_cad40b6f-7d5a-45a4-96cb-945f063b4b0a.webp",
+        "small_button_text": "EXPLORE",
+        "small_button_link": ""
+      }
+    },
     "custom_liquid_KeYj9N": {
       "type": "custom-liquid",
       "custom_css": [
@@ -359,6 +367,7 @@
     "combined_photography_section_MatjmQ",
     "custom_liquid_GHrEnA",
     "custom_banner_section_bLcCab",
+    "small_banner_section_TNtecY",
     "custom_liquid_KeYj9N",
     "custom_banner_section_HMUzUm",
     "1733908113d1a89df4",
