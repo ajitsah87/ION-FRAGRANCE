@@ -78,7 +78,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "NOTES",
-            "content": "<p>{{ product.metafields.custom.note | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.rich_short | metafield_tag }}",
             "liquid": "",
             "default_open": false
           }
@@ -88,15 +88,6 @@
           "settings": {
             "heading": "INGREDIENTS",
             "content": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
-            "liquid": "",
-            "default_open": false
-          }
-        },
-        "collapsible_tab_NQVM6Q": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "REVIEWS",
-            "content": "<p>{{ product.metafields.custom.reviews | metafield_tag }}</p>",
             "liquid": "",
             "default_open": false
           }
@@ -121,7 +112,6 @@
         "addons",
         "collapsible_tab_rDCFGJ",
         "collapsible_tab_KzKbQ6",
-        "collapsible_tab_NQVM6Q",
         "custom_liquid_qpXfaH"
       ],
       "settings": {
