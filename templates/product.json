@@ -32,12 +32,6 @@
             "text_style": "subtitle"
           }
         },
-        "custom_liquid_ciTqYW": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<p>\n{{product.metafields.custom.rich_short_disc.value}}\n</p>"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -47,6 +41,12 @@
         "rating_jpNJ7m": {
           "type": "rating",
           "settings": {}
+        },
+        "custom_text_kWn8kR": {
+          "type": "custom_text",
+          "settings": {
+            "content": "{{ product.metafields.custom.rich_short_disc | metafield_tag }}"
+          }
         },
         "short_description_cnV4fV": {
           "type": "short_description",
@@ -107,9 +107,9 @@
       "block_order": [
         "title",
         "text_NqHVKa",
-        "custom_liquid_ciTqYW",
         "price",
         "rating_jpNJ7m",
+        "custom_text_kWn8kR",
         "short_description_cnV4fV",
         "buy_buttons",
         "shiprocket_promise_promise_widget_fb7QF7",
